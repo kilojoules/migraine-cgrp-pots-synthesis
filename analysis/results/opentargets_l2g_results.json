@@ -1,0 +1,245 @@
+{
+  "query_genes": [
+    "CALCA",
+    "CALCB",
+    "CALCRL",
+    "RAMP1",
+    "CRCP",
+    "ESR1",
+    "ESR2",
+    "GPER1",
+    "ADRA2A",
+    "ADRB1",
+    "ADRB2",
+    "SLC6A2",
+    "DBH",
+    "TH",
+    "PRDM16",
+    "TRPM8",
+    "FHL5",
+    "MEF2D"
+  ],
+  "by_disease": {
+    "MONDO_0005277": {
+      "n_rows": 2541
+    },
+    "EFO_0003821": {
+      "n_rows": 0
+    }
+  },
+  "by_gene": {
+    "CALCA": {
+      "per_disease": {
+        "MONDO_0005277": {
+          "overall_score": 0.7263485038038543,
+          "datatype_scores": {
+            "literature": 0.9866463266189915,
+            "genetic_association": 0.7528082066801342,
+            "clinical": 0.9846606092675894
+          }
+        },
+        "EFO_0003821": null
+      }
+    },
+    "CALCB": {
+      "per_disease": {
+        "MONDO_0005277": {
+          "overall_score": 0.6716442479649604,
+          "datatype_scores": {
+            "literature": 0.34795469379636756,
+            "genetic_association": 0.44964340829974714,
+            "clinical": 0.9846606092675894
+          }
+        },
+        "EFO_0003821": null
+      }
+    },
+    "CALCRL": {
+      "per_disease": {
+        "MONDO_0005277": {
+          "overall_score": 0.6072308579836021,
+          "datatype_scores": {
+            "literature": 0.13597300266446663,
+            "clinical": 0.9920500023272724
+          }
+        },
+        "EFO_0003821": null
+      }
+    },
+    "RAMP1": {
+      "per_disease": {
+        "MONDO_0005277": {
+          "overall_score": 0.5710469959752931,
+          "datatype_scores": {
+            "literature": 0.4950445861209649,
+            "clinical": 0.914576717703655
+          }
+        },
+        "EFO_0003821": null
+      }
+    },
+    "CRCP": {
+      "per_disease": {
+        "MONDO_0005277": {
+          "overall_score": 0.0025870589827929123,
+          "datatype_scores": {
+            "literature": 0.021277577916406734
+          }
+        },
+        "EFO_0003821": null
+      }
+    },
+    "ESR1": {
+      "per_disease": {
+        "MONDO_0005277": {
+          "overall_score": 0.19549434836827984,
+          "datatype_scores": {
+            "literature": 0.3521591953552415,
+            "clinical": 0.3039653988058105
+          }
+        },
+        "EFO_0003821": null
+      }
+    },
+    "ESR2": {
+      "per_disease": {
+        "MONDO_0005277": {
+          "overall_score": 0.015122139373304231,
+          "datatype_scores": {
+            "literature": 0.12437385499068815
+          }
+        },
+        "EFO_0003821": null
+      }
+    },
+    "GPER1": {
+      "per_disease": {
+        "MONDO_0005277": {
+          "overall_score": 0.05776838739592584,
+          "datatype_scores": {
+            "literature": 0.03343619386863916,
+            "genetic_association": 0.09335280104002754
+          }
+        },
+        "EFO_0003821": null
+      }
+    },
+    "ADRA2A": {
+      "per_disease": {
+        "MONDO_0005277": {
+          "overall_score": 0.5766975668926563,
+          "datatype_scores": {
+            "clinical": 0.9486237071033893
+          }
+        },
+        "EFO_0003821": null
+      }
+    },
+    "ADRB1": {
+      "per_disease": {
+        "MONDO_0005277": {
+          "overall_score": 0.6025092429119647,
+          "datatype_scores": {
+            "literature": 0.042566976709433706,
+            "clinical": 0.9889536053590583
+          }
+        },
+        "EFO_0003821": null
+      }
+    },
+    "ADRB2": {
+      "per_disease": {
+        "MONDO_0005277": {
+          "overall_score": 0.6064512708943095,
+          "datatype_scores": {
+            "literature": 0.1722537107203413,
+            "clinical": 0.9889536053590583
+          }
+        },
+        "EFO_0003821": null
+      }
+    },
+    "SLC6A2": {
+      "per_disease": {
+        "MONDO_0005277": {
+          "overall_score": 0.512816474984879,
+          "datatype_scores": {
+            "literature": 0.012158615952232422,
+            "clinical": 0.8429362308069364
+          }
+        },
+        "EFO_0003821": null
+      }
+    },
+    "DBH": {
+      "per_disease": {
+        "MONDO_0005277": {
+          "overall_score": 0.03331626436438565,
+          "datatype_scores": {
+            "literature": 0.27401362536061113
+          }
+        },
+        "EFO_0003821": null
+      }
+    },
+    "TH": {
+      "per_disease": {
+        "MONDO_0005277": {
+          "overall_score": 0.01421289936865207,
+          "datatype_scores": {
+            "literature": 0.1168957011594931
+          }
+        },
+        "EFO_0003821": null
+      }
+    },
+    "PRDM16": {
+      "per_disease": {
+        "MONDO_0005277": {
+          "overall_score": 0.49372290378361,
+          "datatype_scores": {
+            "literature": 0.2806953484608566,
+            "genetic_association": 0.7981019193895025
+          }
+        },
+        "EFO_0003821": null
+      }
+    },
+    "TRPM8": {
+      "per_disease": {
+        "MONDO_0005277": {
+          "overall_score": 0.5216572986404762,
+          "datatype_scores": {
+            "literature": 0.8324686853397654,
+            "genetic_association": 0.8164632109398547
+          }
+        },
+        "EFO_0003821": null
+      }
+    },
+    "FHL5": {
+      "per_disease": {
+        "MONDO_0005277": {
+          "overall_score": 0.5229045526745246,
+          "datatype_scores": {
+            "literature": 0.1053644176904876,
+            "genetic_association": 0.8548700625004608
+          }
+        },
+        "EFO_0003821": null
+      }
+    },
+    "MEF2D": {
+      "per_disease": {
+        "MONDO_0005277": {
+          "overall_score": 0.366214533042653,
+          "datatype_scores": {
+            "literature": 0.11732320271442108,
+            "genetic_association": 0.5965289389140405
+          }
+        },
+        "EFO_0003821": null
+      }
+    }
+  }
+}

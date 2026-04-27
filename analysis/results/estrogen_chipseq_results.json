@@ -1,0 +1,290 @@
+{
+  "data": {
+    "remap_bed": "data/raw/remap/remap2022_ESR1_nr_macs2_hg38_v1_0.bed.gz",
+    "gencode_gtf": "data/raw/gencode/gencode.v44.basic.annotation.gtf.gz",
+    "promoter_window_upstream_bp": 2000,
+    "promoter_window_downstream_bp": 500,
+    "n_protein_coding_genes_gencode": 20020,
+    "n_background_genes": 19567,
+    "headline_threshold": 10,
+    "peak_score_threshold_sweep": [
+      1,
+      5,
+      10,
+      30
+    ],
+    "seed": 20260427,
+    "n_permutations": 10000
+  },
+  "by_threshold": {
+    "1": {
+      "threshold_score_min": 1,
+      "n_remap_peaks_retained": 866869,
+      "n_background_with_esr1_peak": 16802,
+      "background_esr1_bound_fraction": 0.8586906526294271,
+      "cgrp_extended": {
+        "n_in_set": 5,
+        "n_in_background": 5,
+        "n_with_esr1_peak": 5,
+        "fraction_bound": 1.0,
+        "fold_enrichment_vs_background": 1.1645637424116175,
+        "fisher_odds_ratio": Infinity,
+        "fisher_p_two_sided": 1.0,
+        "fisher_p_one_sided_greater": 0.4668175182359712,
+        "length_matched_permutation_observed": 5,
+        "length_matched_permutation_expected_mean": 4.3473,
+        "length_matched_permutation_p_one_sided_greater": 0.4911508849115088
+      },
+      "cgrp_strict": {
+        "n_in_set": 2,
+        "n_in_background": 2,
+        "n_with_esr1_peak": 2,
+        "fraction_bound": 1.0,
+        "fold_enrichment_vs_background": 1.1645637424116175,
+        "fisher_odds_ratio": Infinity,
+        "fisher_p_two_sided": 1.0,
+        "fisher_p_one_sided_greater": 0.7373434352870798,
+        "length_matched_permutation_observed": 2,
+        "length_matched_permutation_expected_mean": 1.7972,
+        "length_matched_permutation_p_one_sided_greater": 0.8066193380661933
+      },
+      "migraine_primary": {
+        "n_in_set": 123,
+        "n_in_background": 104,
+        "n_with_esr1_peak": 95,
+        "fraction_bound": 0.9134615384615384,
+        "fold_enrichment_vs_background": 1.063784187779843,
+        "fisher_odds_ratio": 1.7412528348064351,
+        "fisher_p_two_sided": 0.12047736437805062,
+        "fisher_p_one_sided_greater": 0.06483343338175021,
+        "length_matched_permutation_observed": 95,
+        "length_matched_permutation_expected_mean": 92.4323,
+        "length_matched_permutation_p_one_sided_greater": 0.261973802619738
+      },
+      "autonomic": {
+        "n_in_set": 286,
+        "n_in_background": 286,
+        "n_with_esr1_peak": 259,
+        "fraction_bound": 0.9055944055944056,
+        "fold_enrichment_vs_background": 1.0546224100860453,
+        "fisher_odds_ratio": 1.5876514851307815,
+        "fisher_p_two_sided": 0.02069131364129985,
+        "fisher_p_one_sided_greater": 0.01071134629225744,
+        "length_matched_permutation_observed": 259,
+        "length_matched_permutation_expected_mean": 249.1644,
+        "length_matched_permutation_p_one_sided_greater": 0.044195580441955803
+      }
+    },
+    "5": {
+      "threshold_score_min": 5,
+      "n_remap_peaks_retained": 249261,
+      "n_background_with_esr1_peak": 14325,
+      "background_esr1_bound_fraction": 0.7320999642254816,
+      "cgrp_extended": {
+        "n_in_set": 5,
+        "n_in_background": 5,
+        "n_with_esr1_peak": 3,
+        "fraction_bound": 0.6,
+        "fold_enrichment_vs_background": 0.8195602094240838,
+        "fisher_odds_ratio": 0.5488060326770005,
+        "fisher_p_two_sided": 0.6151740326676762,
+        "fisher_p_one_sided_greater": 0.8767395839573302,
+        "length_matched_permutation_observed": 3,
+        "length_matched_permutation_expected_mean": 3.7615,
+        "length_matched_permutation_p_one_sided_greater": 0.9046095390460954
+      },
+      "cgrp_strict": {
+        "n_in_set": 2,
+        "n_in_background": 2,
+        "n_with_esr1_peak": 1,
+        "fraction_bound": 0.5,
+        "fold_enrichment_vs_background": 0.6829668411867366,
+        "fisher_odds_ratio": 0.36588941636414407,
+        "fisher_p_two_sided": 0.4640396663822038,
+        "fisher_p_one_sided_greater": 0.9282395948331672,
+        "length_matched_permutation_observed": 1,
+        "length_matched_permutation_expected_mean": 1.5931,
+        "length_matched_permutation_p_one_sided_greater": 0.9584041595840416
+      },
+      "migraine_primary": {
+        "n_in_set": 123,
+        "n_in_background": 104,
+        "n_with_esr1_peak": 81,
+        "fraction_bound": 0.7788461538461539,
+        "fold_enrichment_vs_background": 1.0638521949254935,
+        "fisher_odds_ratio": 1.2903648218013992,
+        "fisher_p_two_sided": 0.3183178752889651,
+        "fisher_p_one_sided_greater": 0.1666424961216009,
+        "length_matched_permutation_observed": 81,
+        "length_matched_permutation_expected_mean": 80.6034,
+        "length_matched_permutation_p_one_sided_greater": 0.5194480551944806
+      },
+      "autonomic": {
+        "n_in_set": 286,
+        "n_in_background": 286,
+        "n_with_esr1_peak": 207,
+        "fraction_bound": 0.7237762237762237,
+        "fold_enrichment_vs_background": 0.9886303225570242,
+        "fisher_odds_ratio": 0.958235379558549,
+        "fisher_p_two_sided": 0.7370265697182854,
+        "fisher_p_one_sided_greater": 0.6539269278684083,
+        "length_matched_permutation_observed": 207,
+        "length_matched_permutation_expected_mean": 214.4664,
+        "length_matched_permutation_p_one_sided_greater": 0.8665133486651335
+      }
+    },
+    "10": {
+      "threshold_score_min": 10,
+      "n_remap_peaks_retained": 177413,
+      "n_background_with_esr1_peak": 13310,
+      "background_esr1_bound_fraction": 0.6802269126590689,
+      "cgrp_extended": {
+        "n_in_set": 5,
+        "n_in_background": 5,
+        "n_with_esr1_peak": 3,
+        "fraction_bound": 0.6,
+        "fold_enrichment_vs_background": 0.8820586025544702,
+        "fisher_odds_ratio": 0.705080033065304,
+        "fisher_p_two_sided": 0.6576633997122385,
+        "fisher_p_one_sided_greater": 0.8098221001266297,
+        "length_matched_permutation_observed": 3,
+        "length_matched_permutation_expected_mean": 3.4791,
+        "length_matched_permutation_p_one_sided_greater": 0.8368163183681632
+      },
+      "cgrp_strict": {
+        "n_in_set": 2,
+        "n_in_background": 2,
+        "n_with_esr1_peak": 1,
+        "fraction_bound": 0.5,
+        "fold_enrichment_vs_background": 0.7350488354620586,
+        "fisher_odds_ratio": 0.47005785558644525,
+        "fisher_p_two_sided": 0.5373024644495784,
+        "fisher_p_one_sided_greater": 0.8977562897677162,
+        "length_matched_permutation_observed": 1,
+        "length_matched_permutation_expected_mean": 1.4892,
+        "length_matched_permutation_p_one_sided_greater": 0.936906309369063
+      },
+      "migraine_primary": {
+        "n_in_set": 123,
+        "n_in_background": 104,
+        "n_with_esr1_peak": 75,
+        "fraction_bound": 0.7211538461538461,
+        "fold_enrichment_vs_background": 1.0601665896087382,
+        "fisher_odds_ratio": 1.2169925615205242,
+        "fisher_p_two_sided": 0.4004722375346622,
+        "fisher_p_one_sided_greater": 0.21564629012527076,
+        "length_matched_permutation_observed": 75,
+        "length_matched_permutation_expected_mean": 75.1876,
+        "length_matched_permutation_p_one_sided_greater": 0.5642435756424358
+      },
+      "autonomic": {
+        "n_in_set": 286,
+        "n_in_background": 286,
+        "n_with_esr1_peak": 193,
+        "fraction_bound": 0.6748251748251748,
+        "fold_enrichment_vs_background": 0.9920589177914496,
+        "fisher_odds_ratio": 0.9752197140540758,
+        "fisher_p_two_sided": 0.848182063072739,
+        "fisher_p_one_sided_greater": 0.6056701171126078,
+        "length_matched_permutation_observed": 193,
+        "length_matched_permutation_expected_mean": 199.6613,
+        "length_matched_permutation_p_one_sided_greater": 0.8251174882511749
+      },
+      "per_gene_cgrp_extended": [
+        {
+          "gene": "CALCB",
+          "chrom": "chr11",
+          "strand": "+",
+          "tss": 14904997,
+          "esr1_promoter_peak": true
+        },
+        {
+          "gene": "CALCRL",
+          "chrom": "chr2",
+          "strand": "-",
+          "tss": 187448460,
+          "esr1_promoter_peak": false
+        },
+        {
+          "gene": "RAMP1",
+          "chrom": "chr2",
+          "strand": "+",
+          "tss": 237858893,
+          "esr1_promoter_peak": true
+        },
+        {
+          "gene": "CRCP",
+          "chrom": "chr7",
+          "strand": "+",
+          "tss": 66114604,
+          "esr1_promoter_peak": true
+        },
+        {
+          "gene": "CALCA",
+          "chrom": "chr11",
+          "strand": "-",
+          "tss": 14972354,
+          "esr1_promoter_peak": false
+        }
+      ]
+    },
+    "30": {
+      "threshold_score_min": 30,
+      "n_remap_peaks_retained": 74073,
+      "n_background_with_esr1_peak": 10884,
+      "background_esr1_bound_fraction": 0.5562426534471304,
+      "cgrp_extended": {
+        "n_in_set": 5,
+        "n_in_background": 5,
+        "n_with_esr1_peak": 1,
+        "fraction_bound": 0.2,
+        "fold_enrichment_vs_background": 0.35955531054759277,
+        "fisher_odds_ratio": 0.19937057796563448,
+        "fisher_p_two_sided": 0.1782550738468316,
+        "fisher_p_one_sided_greater": 0.9828031264932693,
+        "length_matched_permutation_observed": 1,
+        "length_matched_permutation_expected_mean": 2.8278,
+        "length_matched_permutation_p_one_sided_greater": 0.987001299870013
+      },
+      "cgrp_strict": {
+        "n_in_set": 2,
+        "n_in_background": 2,
+        "n_with_esr1_peak": 0,
+        "fraction_bound": 0.0,
+        "fold_enrichment_vs_background": 0.0,
+        "fisher_odds_ratio": 0.0,
+        "fisher_p_two_sided": 0.19690796702299979,
+        "fisher_p_one_sided_greater": 1.0,
+        "length_matched_permutation_observed": 0,
+        "length_matched_permutation_expected_mean": 1.2216,
+        "length_matched_permutation_p_one_sided_greater": 1.0
+      },
+      "migraine_primary": {
+        "n_in_set": 123,
+        "n_in_background": 104,
+        "n_with_esr1_peak": 61,
+        "fraction_bound": 0.5865384615384616,
+        "fold_enrichment_vs_background": 1.0544650934328441,
+        "fisher_odds_ratio": 1.132471975057425,
+        "fisher_p_two_sided": 0.5541415477379722,
+        "fisher_p_one_sided_greater": 0.30097929128603795,
+        "length_matched_permutation_observed": 61,
+        "length_matched_permutation_expected_mean": 60.9732,
+        "length_matched_permutation_p_one_sided_greater": 0.5457454254574543
+      },
+      "autonomic": {
+        "n_in_set": 286,
+        "n_in_background": 286,
+        "n_with_esr1_peak": 138,
+        "fraction_bound": 0.4825174825174825,
+        "fold_enrichment_vs_background": 0.8674586163560805,
+        "fisher_odds_ratio": 0.7405835483724931,
+        "fisher_p_two_sided": 0.011814563697094237,
+        "fisher_p_one_sided_greater": 0.9950577203118982,
+        "length_matched_permutation_observed": 138,
+        "length_matched_permutation_expected_mean": 162.6898,
+        "length_matched_permutation_p_one_sided_greater": 0.9984001599840016
+      }
+    }
+  }
+}
