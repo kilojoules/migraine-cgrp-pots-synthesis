@@ -1,0 +1,5 @@
+__pycache__/
+*.pyc
+# tee log artifacts (redundant with results JSON)
+results/proximity_run.log
+results/ppi_build.log

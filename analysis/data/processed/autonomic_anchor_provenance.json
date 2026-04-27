@@ -1,0 +1,63 @@
+{
+  "cgrp_anchor_strict": {
+    "genes": [
+      "CALCRL",
+      "RAMP1"
+    ],
+    "rationale": "CGRP-selective heterodimer"
+  },
+  "cgrp_anchor_extended": {
+    "genes": [
+      "CALCA",
+      "CALCB",
+      "CALCRL",
+      "RAMP1",
+      "CRCP"
+    ],
+    "rationale": "Ligands + receptor + coreceptor"
+  },
+  "autonomic_set": {
+    "go_terms": {
+      "sympathetic nervous system development": "GO:0048485",
+      "parasympathetic nervous system development": "GO:0048486",
+      "regulation of heart rate by chemical signal": "GO:0003062",
+      "adrenergic receptor signaling pathway": "GO:0071875",
+      "norepinephrine metabolic process": "GO:0042415",
+      "regulation of systemic arterial blood pressure by norepinephrine-epinephrine": "GO:0001994",
+      "baroreceptor response to increased systemic arterial blood pressure": "GO:0001978"
+    },
+    "kegg_pathways": {
+      "hsa04261": "Adrenergic signaling in cardiomyocytes",
+      "hsa04270": "Vascular smooth muscle contraction"
+    },
+    "manual_seeds": [
+      "ADRB1",
+      "ADRB2",
+      "ADRB3",
+      "ADRA1A",
+      "ADRA1B",
+      "ADRA1D",
+      "ADRA2A",
+      "ADRA2B",
+      "ADRA2C",
+      "SLC6A2",
+      "COMT",
+      "GNB3",
+      "DBH",
+      "TH",
+      "PNMT",
+      "CHRM2",
+      "CHRM3",
+      "CHRNB1",
+      "CHRNA3",
+      "NPY",
+      "NPY1R",
+      "NPY2R"
+    ],
+    "n_unique_genes": 286,
+    "data_sources": [
+      "mygene.info v3 (https://mygene.info/v3/)",
+      "KEGG REST API (https://rest.kegg.jp/)"
+    ]
+  }
+}

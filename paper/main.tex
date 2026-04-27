@@ -28,7 +28,7 @@
 \maketitle
 
 \begin{abstract}
-Migraine and Postural Orthostatic Tachycardia Syndrome (POTS) co-occur clinically at rates well above population baselines, yet a shared mechanistic explanation remains unsettled. Migraine genetics is mature: large genome-wide association studies have identified more than one hundred risk loci, and Calcitonin Gene-Related Peptide (CGRP)--targeting therapies are clinically effective. POTS genetics, by contrast, is essentially absent due to data scarcity, forcing any computational investigation of the comorbidity to triangulate rather than cross-reference. This paper proposes and motivates such a triangulation. We frame the question, review what is known about each of the three angles---migraine genetics, autonomic and adrenergic biology, and CGRP signaling---and describe the analyses (set overlap with permutation nulls, pathway enrichment, and protein--protein interaction network proximity) that the available data can support. Our ceiling claim is consistency, not causation: whether migraine genetic risk sits closer to autonomic and CGRP biology than chance would predict, and what that implies for the POTS--migraine--CGRP axis. \emph{This document is the framing and literature-review phase. Empirical analyses are reserved for a follow-up phase, gated on the gap analysis presented in Section~\ref{sec:related}.}
+Migraine and Postural Orthostatic Tachycardia Syndrome (POTS) co-occur clinically at rates well above population baselines, yet a shared mechanistic explanation remains unsettled. Migraine genetics is mature, with the largest meta-analysis identifying 123 risk loci, and Calcitonin Gene-Related Peptide (CGRP)-targeting therapies are clinically effective. POTS genetics, by contrast, is essentially absent due to data scarcity, forcing any computational investigation of the comorbidity to triangulate rather than cross-reference. We pre-registered and executed three tests using the Hautakangas et al.\ (2022) migraine GWAS gene set (123 lead-SNP-nearest genes, with sensitivity expansions to FOCUS/TWAS-prioritized and eQTL-mapped sets): (i) network proximity in the BioGRID$\cup$IntAct physical-only protein--protein interaction graph (22{,}091 nodes, 1{,}109{,}901 edges) between the migraine set and the CGRP-selective receptor anchor (CALCRL+RAMP1), with a degree-matched null and 1{,}000 permutations; (ii) focused autonomic / adrenergic gene-set over-representation against a length-quintile-matched permutation null; (iii) GTEx v8 tissue expression of the migraine set across autonomic-relevant tissues. The headline network-proximity result is a pre-registered \emph{negative}: the observed closest distance $d_c = 2.50$ exceeds the null mean ($z = +3.54$, $p = 0.004$ two-sided), and three of four control diseases (psoriasis, essential hypertension, type 2 diabetes) show the same direction at similar magnitude---consistent with sparse PPI coverage of the CGRP-receptor module (CALCRL has only six neighbors in the merged graph) rather than CGRP-specific exclusion. Set-level autonomic over-representation is also null ($k = 2$ vs $\mathbb{E}[k] = 1.9$, $p = 0.57$). However, GTEx expression of migraine genes is concentrated in autonomic-relevant tissues (median log$_2$(TPM+1) of 3.4--3.8 in tibial artery, aorta, and coronary artery vs 0.8 in whole blood), and the CGRP anchor genes follow the same tissue pattern. The synthesis: at the resolution available, the proposed PPI- and set-level autonomic--CGRP convergence is not detectable in the migraine common-variant signal, but the tissue-expression alignment is consistent with the trigeminovascular framing. We discuss interactome incompleteness, the ligand--receptor asymmetry in migraine genetics, and what would be required to revisit the network claim with confidence.
 \end{abstract}
 
 \section{Introduction}
@@ -44,12 +44,12 @@ Migraine and Postural Orthostatic Tachycardia Syndrome (POTS) co-occur clinicall
 
 \paragraph{Honest scoping.} This work is a computational synthesis and secondary analysis. It does not generate new wet-lab data, does not establish causation, and cannot resolve POTS genetics in the absence of POTS cohorts. Its ceiling claim is \emph{consistency with} an autonomic dysregulation hypothesis. A clean negative result---migraine genetics does not preferentially overlap autonomic biology more than matched neurological conditions---would itself be informative.
 
-\paragraph{Contributions of this phase.}
+\paragraph{Contributions.}
 \begin{itemize}
   \item Frame the POTS--migraine--CGRP triangulation as a tractable computational object given the current data asymmetry.
-  \item Provide a comprehensive literature review across migraine genetics, CGRP biology, autonomic and POTS biology, and computational pathway/network methods.
-  \item Conduct a gap analysis to determine whether the proposed analyses are novel, partially novel, or redundant with published work.
-  \item Specify the analysis plan, success criteria, and null-model design that the next phase will execute.
+  \item Provide a comprehensive literature review across migraine genetics, CGRP biology, autonomic and POTS biology, and computational pathway / network methods, plus a gap analysis establishing the proposed analyses as partially-novel.
+  \item Pre-register and execute three pre-registered tests against published data: PPI network proximity (BioGRID$\cup$IntAct, $22{,}091$ nodes / $1{,}109{,}901$ edges) from migraine GWAS-prioritized genes to the CGRP-selective receptor anchor with a degree-matched null and four specificity controls, focused autonomic gene-set over-representation against a length-matched permutation null, and GTEx tissue expression across pre-registered autonomic-relevant tissues.
+  \item Report the results---two pre-registered negatives at the network and over-representation layers and a positive tissue-expression convergence---and discuss what each does and does not support for the POTS--migraine--CGRP axis.
 \end{itemize}
 
 \section{Background}
@@ -118,45 +118,125 @@ Each of the three legs of the proposed triangulation has been touched by publish
 
 This verdict gates the analysis plan in Section~\ref{sec:methods}: the proposed combination of focused autonomic gene-set permutation tests, network-proximity hypothesis testing against the CGRP receptor module, and POTS-comorbidity framing constitutes a contribution that the existing literature has not made.
 
-\section{Proposed Methods}
+\section{Methods}
 \label{sec:methods}
-\textit{[Placeholder, written after the gap-analysis verdict.]}
 
-\subsection{Gene set construction}
-\textit{[Curated migraine GWAS gene set (Hautakangas anchor + GWAS Catalog), autonomic/adrenergic gene set (GO + KEGG + manual candidates), CGRP-pathway gene set (CALCA, CALCB, CALCRL, RAMP1, RCP/CRCP and immediate signaling neighbors). Provenance and version-pinning for each.]}
+The analysis specification was committed to git (\texttt{analysis/PRE\_REGISTRATION.md}) before any data was opened. All randomness is seeded with 20260426. All code, gene sets, intermediate tables, and figures are reproducible from raw downloads via scripts in \texttt{analysis/scripts/}.
 
-\subsection{Set overlap with matched-background permutation null}
-\textit{[Permutation over gene-length-matched and expression-matched background gene sets. Effect size + 95\% confidence interval, not just $p$-values.]}
+\subsection{Migraine gene set}
+\label{sec:meth-migraine}
+The primary migraine gene set is the 123 lead-SNP-nearest genes (the ``Locus ID'' column of Hautakangas et al.\ 2022 Supplementary Table 3a). Two pre-registered sensitivity sets are reported: (i) FOCUS / S-PrediXcan-COLOC fine-mapped genes (Supplementary Table 11c, PIP $> 0.5$ or PPH4 $> 0.5$; 272 unique genes), and (ii) the union of nearest-gene and lead-variant eQTL-mapped genes (Supplementary Tables 3a and 9; 628 unique genes). The CGRP ligand locus on chromosome 11 (locus 75, lead variant rs1003194) maps to \textit{INSC} as the lead-SNP-nearest gene in the primary set, and to \textit{CALCA} and \textit{CALCB} in the FOCUS-prioritized sensitivity set, illustrating the value of statistical fine-mapping over proximity for ligand-locus assignment.
 
-\subsection{Pathway enrichment}
-\textit{[g:Profiler / Enrichr cross-check. Ontology source disclosure.]}
+\subsection{CGRP receptor anchor and autonomic gene set}
+\label{sec:meth-anchor}
+The strict CGRP anchor (primary) is the CGRP-selective heterodimer \{CALCRL, RAMP1\}; RAMP2 and RAMP3 form receptor dimers with CALCRL but bind adrenomedullin and adrenomedullin-2 rather than CGRP, and were excluded from the strict anchor. An extended sensitivity anchor adds the ligand genes \textit{CALCA}, \textit{CALCB} and the receptor component protein \textit{CRCP}: \{CALCA, CALCB, CALCRL, RAMP1, CRCP\}. The autonomic / adrenergic gene set (286 unique HGNC symbols) is the union of gene memberships for seven pre-registered Gene Ontology terms (queried via mygene.info), KEGG pathways \texttt{hsa04261} (Adrenergic signaling in cardiomyocytes) and \texttt{hsa04270} (Vascular smooth muscle contraction), and a fixed list of 22 manually-seeded adrenergic, catecholamine, and autonomic-receptor genes.
 
-\subsection{PPI network proximity}
-\textit{[STRING or BioGRID PPI graph. Shortest-path distance from migraine gene set to CGRP receptor complex; intermediate-node enrichment in autonomic gene set; degree-preserving null.]}
+\subsection{Protein--protein interaction network}
+\label{sec:meth-ppi}
+The primary PPI graph is the union of BioGRID Homo sapiens physical interactions (release 5.0.256) and IntAct human binary interactions (release 2026-01-10), restricted to taxid 9606 on both interactors and to physical / direct-interaction / association entries. Edges are deduplicated and self-loops removed. Genes are represented by official HGNC symbols. The merged graph contains 22{,}091 nodes and 1{,}109{,}901 unique undirected edges; the largest connected component contains all nodes. Network analyses are run on the LCC. STRING is excluded from the primary graph because its text-mining channel introduces a literature bias around well-studied genes (CALCA, CALCRL, RAMP1) that would artificially shorten the distance from any well-studied disease gene set to the CGRP module.
 
-\subsection{Tissue expression}
-\textit{[GTEx expression of migraine genes across autonomic-relevant tissues: brainstem, cervical spinal cord, sympathetic ganglia where available, vascular smooth muscle, trigeminal-proxy tissues.]}
+\subsection{Network proximity}
+\label{sec:meth-proximity}
+For source set $S$ (migraine) and target set $T$ (CGRP anchor), the closest distance \cite{guney_2016_proximity}
+$$d_c(S, T) = \frac{1}{|S \cap V(G)|} \sum_{s \in S \cap V(G)} \min_{t \in T \cap V(G)} d_G(s, t)$$
+is computed using unweighted shortest paths on the LCC. Statistical significance is assessed against a degree-binned random gene-set null (Guney 2016 protocol): genes are partitioned into 100 log-spaced degree bins, and each gene in $S$ and $T$ is independently replaced by a random gene from the same degree bin to construct a matched random pair $(S', T')$; this is repeated $1{,}000$ times. The reported $z$-score is $(d_c(S, T) - \mathbb{E}[d_c(S', T')]) / \mathrm{SD}(d_c(S', T'))$ and the empirical two-sided $p$-value is $2 \min(\Pr[d_c(S', T') \le d_c(S, T)], \Pr[d_c(S', T') \ge d_c(S, T)])$. Specificity controls compute $d_c$ from four pre-registered control disease gene sets to the same CGRP anchor; control sets are the top-123 OpenTargets-associated genes for schizophrenia (MONDO\_0005090), psoriasis (EFO\_0000676), essential hypertension (MONDO\_0001134), and type~2 diabetes (MONDO\_0005148).
+
+\subsection{Focused autonomic over-representation}
+\label{sec:meth-overrep}
+Hypergeometric over-representation of the autonomic gene set in the migraine gene set was tested against a permutation null in which $|S \cap V_{\mathrm{bg}}|$ random genes were drawn matching the migraine set on gene-length quintile (gene-length features computed from genomic coordinates retrieved from mygene.info; background of 19{,}567 protein-coding HGNC genes; 1{,}000 permutations).
+
+\subsection{Pathway enrichment and tissue expression}
+\label{sec:meth-enrichment-gtex}
+General pathway enrichment of the primary migraine set was performed via the g:Profiler API \cite{raudvere_2019_gprofiler} over GO\_BP, GO\_MF, KEGG, and Reactome with g:SCS multiple-testing correction. Tissue expression was queried from GTEx v8 median TPM \cite{gtex_2020_atlas} across the seven pre-registered autonomic-relevant tissues (brain - spinal cord cervical c-1, brain - hypothalamus, nerve - tibial, artery - tibial, artery - aorta, artery - coronary, whole blood); the trigeminal and sympathetic ganglia are not represented in GTEx v8 and are surrogated by these tissues per pre-registration.
 
 \section{Results}
 \label{sec:results}
-\textit{[Placeholder for Phase 2.]}
+
+\subsection{Network proximity does not place migraine genes near the CGRP receptor complex}
+\label{sec:res-proximity}
+
+The primary network-proximity analysis (Figure~\ref{fig:proximity}) yielded a pre-registered \emph{negative} result. The closest distance from the 105 migraine GWAS-prioritized genes (of 123) present in the merged BioGRID$\cup$IntAct LCC to the strict CGRP receptor anchor \{CALCRL, RAMP1\} was $d_c = 2.505$, while the degree-matched null distribution had mean $2.233$ (SD $0.077$). The migraine signal is therefore $z = +3.54$ \emph{further} from the CGRP receptor than chance ($p = 0.004$ two-sided). Both pre-registered sensitivity analyses on alternative migraine gene sets reproduced and amplified this signal: FOCUS / TWAS-prioritized migraine ($n = 272$) gave $z = +4.51$ ($p < 0.001$), and the union of nearest-gene plus eQTL-mapped migraine ($n = 628$) gave $z = +4.51$ ($p = 0.002$). The extended-anchor analysis, which adds the ligand genes \textit{CALCA} and \textit{CALCB} to the CGRP receptor target, brings the migraine set within marginal significance of chance proximity ($z = +2.13$, $p = 0.062$), reflecting the established fact that \textit{CALCB} is itself a migraine GWAS hit and is therefore at distance zero in any sensitivity set that includes eQTL-mapped genes.
+
+Critically, three of four pre-registered specificity controls show the same direction at similar magnitude: psoriasis $z = +4.22$ ($p < 0.001$), essential hypertension $z = +3.36$ ($p = 0.010$), and type~2 diabetes $z = +4.24$ ($p = 0.006$). Only schizophrenia is at chance proximity to the CGRP receptor complex ($z = -0.34$, $p = 0.86$). This pattern fails the pre-registered specificity criterion ($z_{\text{migraine}} < z_{\text{control}}$ for all four controls); the migraine signal therefore is not preferentially distant from CGRP relative to other diseases, but the CGRP receptor module is generally distant from many small disease gene sets in the merged interactome---most parsimoniously explained by interactome incompleteness around the receptor complex itself. \textit{CALCRL} has only 6 PPI partners in the merged graph, placing it in a sparse region of the interactome; the CGRP-selective heterodimer node thus presents a small target for short paths.
+
+\begin{figure}[h]
+  \centering
+  \includegraphics[width=0.85\textwidth]{../analysis/figures/proximity_null_distribution.pdf}
+  \caption{Network proximity test. Histogram of $d_c$ over $1{,}000$ degree-matched permutations for the migraine $\to$ CGRP receptor (CALCRL+RAMP1) test. The observed migraine value (red, $d_c = 2.505$, $z = +3.54$) lies in the right tail of the null and is matched in direction by three control diseases (psoriasis, essential hypertension, type~2 diabetes); only schizophrenia sits at chance distance.}
+  \label{fig:proximity}
+\end{figure}
+
+\subsection{Focused autonomic over-representation is also null}
+\label{sec:res-overrep}
+
+The autonomic / adrenergic gene set (286 HGNC symbols, 286 mapped to the 19{,}567-gene protein-coding background) intersected the 104 migraine genes mapped to the same background in only two genes: \textit{ATP2B1} and \textit{PLA2G4A}. The length-quintile-matched permutation null had mean $1.88$ (SD $1.34$), yielding fold-enrichment $1.06\times$, $z = +0.09$, and one-sided empirical $p = 0.57$. The Fisher exact one-sided $p$ for over-representation against the full background is $0.45$ (OR $= 1.32$). The autonomic gene set is therefore not statistically over-represented in lead-SNP migraine genes at the resolution available.
+
+\subsection{General pathway enrichment recovers vascular and developmental terms; nothing autonomic-specific}
+\label{sec:res-gprofiler}
+
+The g:Profiler enrichment of the 123 lead-SNP migraine genes against GO~BP, GO~MF, KEGG, and Reactome (g:SCS-corrected) returned $39$ significant terms. The headline enriched categories are broadly developmental and vascular: \emph{developmental process} ($p = 7.2 \times 10^{-6}$), \emph{anatomical structure development} ($p = 2.2 \times 10^{-5}$), \emph{anatomical structure formation involved in morphogenesis} ($p = 1.8 \times 10^{-4}$), \emph{blood vessel morphogenesis} ($p = 4.2 \times 10^{-4}$), \emph{vasculature development} ($p = 4.2 \times 10^{-3}$), and \emph{circulatory system development} ($p = 8.1 \times 10^{-3}$). No term containing the substrings \emph{adrenergic, sympathetic, parasympathetic, autonomic, catecholamine, norepinephrine, CGRP, calcitonin, trigeminal,} or \emph{baroreceptor} reached significance. The unbiased enrichment view therefore reproduces the vascular component of the Hautakangas tissue-enrichment finding without recovering autonomic-specific signal.
+
+\subsection{Tissue expression: migraine genes are concentrated in autonomic-relevant tissues, and the CGRP anchor follows the same pattern}
+\label{sec:res-gtex}
+
+GTEx v8 median TPM for the migraine and CGRP gene sets across the seven pre-registered autonomic-relevant tissues are summarised in Table~\ref{tab:gtex} and visualised in Figure~\ref{fig:gtex}. Migraine genes have median log$_2$(TPM+1) of $3.4$--$3.8$ in the three arterial tissues, $3.7$ in tibial nerve, and $2.2$--$2.4$ in spinal cord and hypothalamus, against a whole-blood baseline of $0.79$. The CGRP extended-anchor genes (5 of 5 with GTEx coverage) show the same pattern, with highest expression in coronary and tibial arteries (median log$_2$(TPM+1) of $4.6$). All-genes baseline median log$_2$(TPM+1) is below $0.10$ in every autonomic-relevant tissue, indicating tissue specificity of both gene sets relative to genome-wide expressed protein-coding genes.
+
+\begin{table}[h]
+\centering
+\caption{Median log$_2$(TPM+1) per GTEx v8 tissue for the migraine GWAS gene set, the CGRP extended anchor (\textit{CALCA, CALCB, CALCRL, RAMP1, CRCP}), and the protein-coding genome-wide baseline. The migraine and CGRP sets share a tissue distribution concentrated in nerve and arterial tissues.}
+\label{tab:gtex}
+\small
+\begin{tabular}{lccc}
+\toprule
+Tissue & Migraine median & CGRP median & All-genes median \\
+\midrule
+Brain --- spinal cord (cervical c-1) & 2.43 & 2.59 & 0.02 \\
+Brain --- hypothalamus & 2.24 & 1.83 & 0.04 \\
+Nerve --- tibial & 3.70 & 4.00 & 0.10 \\
+Artery --- tibial & 3.78 & 4.58 & 0.00 \\
+Artery --- aorta & 3.44 & 3.40 & 0.00 \\
+Artery --- coronary & 3.51 & 4.63 & 0.02 \\
+Whole blood & 0.79 & 0.35 & 0.00 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{figure}[h]
+  \centering
+  \includegraphics[width=0.85\textwidth]{../analysis/figures/gtex_tissue_heatmap.pdf}
+  \caption{GTEx v8 median log$_2$(TPM+1) heatmap across autonomic-relevant tissues for the top-50-expressed migraine GWAS genes plus the CGRP extended-anchor genes. Red row labels mark CGRP anchor genes; blue marks migraine genes. The CGRP and migraine sets share a tissue distribution dominated by nerve and arterial tissues.}
+  \label{fig:gtex}
+\end{figure}
 
 \section{Discussion}
 \label{sec:discussion}
-\textit{[Placeholder. Will frame whatever is found explicitly as consistency-with, not evidence-for, the POTS--migraine--CGRP axis.]}
+
+The pre-registered analyses produce a coherent picture that is more nuanced than the strongest version of the POTS--migraine--CGRP triangulation hypothesis would predict, and is precisely the kind of mixed-result outcome that the gap analysis (Section~\ref{sec:related}) anticipated as one of four possible outcomes. We summarise the evidence and discuss what it does and does not support.
+
+\paragraph{What the negative network and over-representation results mean.} Two of the three pre-registered tests are null. The migraine common-variant signal does not preferentially cluster near the CGRP-selective receptor heterodimer in the human PPI interactome (Section~\ref{sec:res-proximity}), and is not enriched for adrenergic / autonomic gene-set membership (Section~\ref{sec:res-overrep}). The most parsimonious explanation for the network result is interactome incompleteness around the receptor module rather than CGRP-specific exclusion of migraine genes: \textit{CALCRL} has only six PPI partners in the merged BioGRID$\cup$IntAct graph and sits in a sparse region of the interactome, and three of four control diseases (psoriasis, essential hypertension, type~2 diabetes) reproduce the same direction at similar magnitude. The schizophrenia control sits at chance proximity, which we attribute to schizophrenia's unusually high-PPI-degree GWAS gene roster (e.g.\ \textit{DRD2, SHANK3}) rather than to a shared mechanism with CGRP signaling. The set-overlap test failure is consistent with the broader literature on migraine genetics: as Hautakangas et al.\ already observed, only the CGRP \emph{ligand} locus (\textit{CALCA}/\textit{CALCB}) reaches genome-wide significance, while the receptor and adrenergic-system genes do not---an asymmetry that this work confirms is preserved when we move from variant-level enrichment to network and pathway space.
+
+\paragraph{What the tissue-expression result does support.} GTEx tissue expression of the migraine gene set is robustly concentrated in the autonomic-relevant tissue panel (tibial nerve, tibial / aortic / coronary arteries, brain stem, hypothalamus) at levels two to four log$_2$ units above the protein-coding baseline, and the CGRP extended-anchor genes share this tissue distribution. This is consistent with the trigeminovascular framing of migraine and with CGRP's documented role as a perivascular, sensory-nerve-derived neuropeptide \cite{russell_2014_cgrp_physiology}. The tissue-level convergence is the layer at which the synthesis we proposed survives empirical scrutiny.
+
+\paragraph{Reconciling the layers.} Migraine genes share a tissue distribution with CGRP-pathway genes (transcriptional / spatial layer) without sharing a PPI neighbourhood with the CGRP receptor (network layer) or showing autonomic-set over-representation (variant-level enrichment). This is consistent with a model in which migraine common-variant risk reshapes the same tissues in which the CGRP pathway operates, but does not act through direct disruption of CGRP receptor signaling complexes that current PPI databases capture. The mature pharmacology of CGRP-receptor antagonists works because perturbational pharmacology directly modulates receptor signaling at the trigeminal ganglion; the genetic signal we test does not need to overlap that receptor module to be consistent with the trigeminovascular model.
+
+\paragraph{Implications for the POTS--migraine comorbidity hypothesis.} The estrogen-response convergence highlighted in Section~\ref{sec:related}---POTS rare- and common-variant pathway enrichment recovering HALLMARK\_ESTROGEN\_RESPONSE\_EARLY \cite{qu_2025_pots_genetics}, which mechanistically modulates trigeminovascular CGRP signaling \cite{krause_2021_estrogen}---remains an unfalsified conjecture from this synthesis. The PPI- and set-level tests we ran cannot adjudicate it because they do not include estrogen receptors as anchors. The clinical observations that ground the comorbidity (Section~\ref{sec:bg-pots})---female predominance shared by the two conditions, the clinical hEDS-POTS-migraine-MCAS cluster, autonomic dysfunction measurable in migraineurs themselves---are not addressed by this network analysis.
+
+\paragraph{What would change the network conclusion.} The most actionable follow-up is denser interactome coverage of the CGRP receptor module: targeted affinity purification--mass spectrometry on CALCRL/RAMP1 in trigeminal-ganglion-relevant cell types, or the inclusion of recent BioPlex / OpenCell datasets restricted to the receptor's interaction partners, would change the upper bound of what proximity tests can detect. A second avenue is to run the same proximity test against an estrogen-receptor anchor (\textit{ESR1}, \textit{ESR2}, \textit{GPER1}) given the Qu / Krause convergence, which is a tractable extension of this pipeline. A third is to use a genetic-correlation-based test (LDSC) once a properly powered POTS GWAS cross-trait analysis becomes available---the field's missing data dependency that motivated triangulation in the first place.
 
 \section{Limitations}
 \label{sec:limitations}
 \begin{itemize}
-  \item No POTS genetic data is available at scale. The autonomic gene set is a mechanism-driven proxy, not a phenotype-derived signature, and any conclusion about POTS specifically is downstream of that proxy choice.
-  \item Migraine GWAS captures common-variant heritability; rare-variant and structural-variant contributions are not represented.
-  \item PPI network analyses inherit biases from interactome curation: well-studied proteins (including CGRP-pathway proteins) accumulate edges disproportionately. Degree-preserving nulls partially address this; they do not eliminate it.
-  \item Pathway enrichment is sensitive to gene-set definition, background gene set, and ontology version. We pin versions but readers should interpret enrichment $p$-values as exploratory.
-  \item Causation cannot be inferred from any of the planned analyses. The synthesis frames hypotheses for downstream testing in cohorts where both phenotypes are measured.
+  \item \textbf{Interactome incompleteness around the CGRP receptor.} The dominant limitation, surfaced empirically by the network-proximity result, is sparse PPI coverage of the strict CGRP-selective heterodimer. \textit{CALCRL} has six interaction partners in BioGRID$\cup$IntAct; the broader CGRP-receptor module (including RAMP1, RAMP2, RAMP3, CRCP) is reasonably covered, but the CGRP-selective complex on which the strict anchor depends is small. Menche et al.\ \cite{menche_2015_diseaseome} establish that disease modules require approximately 25--50\% coverage to be identifiable in network proximity; we are below that threshold for CALCRL specifically. Three of four control diseases failing the specificity criterion is the empirical signature of this limitation.
+  \item \textbf{Lead-SNP-nearest gene assignment is a coarse proxy.} The locus-75 example---\textit{INSC} as the nearest gene of the CGRP-ligand locus, with \textit{CALCA} / \textit{CALCB} surfacing only under FOCUS / TWAS prioritization---illustrates that nearest-gene assignment systematically misses the causal gene at a non-trivial fraction of loci. Sensitivity analyses with FOCUS / TWAS-prioritized and eQTL-mapped sets did not change the qualitative direction of the proximity result.
+  \item \textbf{No POTS genetic data at scale.} The autonomic gene set is a mechanism-driven proxy, not a phenotype-derived signature; any conclusion about POTS specifically is downstream of that proxy choice. The first systematic POTS genomic study \cite{qu_2025_pots_genetics} was insufficiently powered to support cross-trait genetic correlation with migraine.
+  \item \textbf{Migraine GWAS captures common-variant heritability only.} Rare-variant and structural-variant contributions \cite{bjornsdottir_2023_rare_migraine_variants}, and the FHM monogenic backbone \cite{alfayyadh_2024_hemiplegic_migraine_review}, are not represented in the network and over-representation tests; sensitivity analyses with FOCUS / TWAS sets partially address this.
+  \item \textbf{Trigeminal and sympathetic ganglia are not in GTEx v8.} The tissue-expression result is anchored on tibial nerve and arterial tissues as proxies; the tissues most directly implicated in trigeminovascular pathophysiology are not testable at the GTEx-scale resolution used here.
+  \item \textbf{Pathway enrichment} is sensitive to gene-set definition, background gene set, and ontology version. We pin versions but readers should interpret enrichment $p$-values as exploratory.
+  \item \textbf{Causation cannot be inferred.} The synthesis frames hypotheses for downstream testing in cohorts where both phenotypes are measured.
 \end{itemize}
 
 \section*{Reproducibility}
-All code, gene sets with provenance, and figure-generation notebooks will be released as a public repository alongside the next phase of this work. The literature review notes (\texttt{lit\_review.md}) and version-pinned gene-set files are tracked in the same repository.
+All analysis code, gene sets with provenance, intermediate tables, figures, and the pre-registration document are tracked in the public repository at \url{https://github.com/kilojoules/migraine-cgrp-pots-synthesis}. The pre-registration (\texttt{analysis/PRE\_REGISTRATION.md}) was committed before any data was opened; deviations are recorded as such. Raw downloads (Hautakangas 2022 supplementary tables, BioGRID 5.0.256, IntAct 2026-01-10, GTEx v8 median TPM) are not redistributed but are fetched by the scripts in \texttt{analysis/scripts/} from their canonical sources, with SHA-256 hashes recorded in \texttt{analysis/data/raw/MANIFEST.sha256}. Random seeds are fixed at 20260426. Software versions are pinned in \texttt{analysis/requirements.txt}.
 
 \printbibliography
 

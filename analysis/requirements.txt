@@ -1,0 +1,9 @@
+pandas==2.2.3
+numpy==1.23.5
+scipy==1.13.1
+networkx==3.2.1
+openpyxl==3.1.5
+requests==2.32.3
+mygene==3.2.2
+matplotlib==3.9.2
+seaborn==0.13.2

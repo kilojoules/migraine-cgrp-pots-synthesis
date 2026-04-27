@@ -1,0 +1,29 @@
+{
+  "source_paper": "Hautakangas et al. 2022, Nat Genet 54:152-160, doi:10.1038/s41588-021-00990-0",
+  "source_file": "data/raw/hautakangas2022_supp.xlsx",
+  "source_file_sha256": "eb13a123dba46453cbbcdfd18727e54e09aa5c27dc60dd6336503e69c175be3d",
+  "primary_set": {
+    "rule": "Lead-SNP nearest gene (Locus ID column, with 'near ' prefix stripped)",
+    "table": "Supplementary Table 3a",
+    "n_loci": 123,
+    "n_unique_genes": 123,
+    "output": "data/processed/migraine_set_primary.tsv"
+  },
+  "sensitivity_focus_twas": {
+    "rule": "Union of FOCUS PIP>0.5 and S-PrediXcan/COLOC PPH4>0.5 prioritized genes",
+    "table": "Supplementary Table 11c",
+    "n_entries": 363,
+    "n_unique_genes": 272,
+    "output": "data/processed/migraine_set_sensitivity_focus_twas.tsv"
+  },
+  "sensitivity_nearest_plus_eqtl": {
+    "rule": "Union of lead-SNP nearest (Table 3a) and lead-variant eQTL-mapped genes (Table 9)",
+    "tables": [
+      "Supplementary Table 3a",
+      "Supplementary Table 9"
+    ],
+    "n_unique_genes": 628,
+    "output": "data/processed/migraine_set_sensitivity_nearest_plus_eqtl.tsv"
+  },
+  "hgnc_remap_pending": true
+}

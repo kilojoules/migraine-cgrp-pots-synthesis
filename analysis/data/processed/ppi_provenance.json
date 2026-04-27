@@ -1,0 +1,22 @@
+{
+  "biogrid": {
+    "file": "data/raw/biogrid_homo_sapiens.tab3.txt",
+    "sha256": "b6311b924332c4f382632cf45a6e83ebeabb3a05f0cba571933d2746b9750a0d",
+    "filter": "Experimental System Type == physical, both organisms taxid 9606",
+    "n_unique_undirected_edges": 930508
+  },
+  "intact": {
+    "file": "data/raw/intact.zip",
+    "sha256": "8409c87570d9dc9d3bc3676615e29146b2d8b89bfdbf2d30efa5b46484dc7a79",
+    "filter": "human-human, interaction type contains 'physical', 'direct interaction', or 'association'",
+    "n_unique_undirected_edges": 526655
+  },
+  "union": {
+    "n_edges": 1109901,
+    "n_nodes": 22091,
+    "n_overlap_with_biogrid_intact": 347262,
+    "lcc_n_nodes": 22091,
+    "lcc_n_edges": 1109901
+  },
+  "build_timestamp_utc": "2026-04-27T02:27:14Z"
+}

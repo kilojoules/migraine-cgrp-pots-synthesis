@@ -1,0 +1,40 @@
+source	native	name	p_value	intersection_size	term_size	query_size	effective_domain_size
+GO:BP	GO:0032502	developmental process	7.2319008994172545e-06	58	6535	96	20972
+GO:BP	GO:0048856	anatomical structure development	2.2010120491878906e-05	54	5948	96	20972
+GO:BP	GO:0048646	anatomical structure formation involved in morphogenesis	0.00017889007144126592	21	1190	96	20972
+GO:BP	GO:0045944	positive regulation of transcription by RNA polymerase II	0.000343357988026965	21	1237	96	20972
+GO:BP	GO:0048514	blood vessel morphogenesis	0.00042411749119407907	15	632	96	20972
+GO:BP	GO:0007275	multicellular organism development	0.0007023738807198718	44	4690	96	20972
+GO:BP	GO:0032501	multicellular organismal process	0.0007514577846098202	58	7337	96	20972
+GO:BP	GO:0035239	tube morphogenesis	0.0010407562667933948	17	877	96	20972
+GO:BP	GO:0035295	tube development	0.0010643756320464015	19	1094	96	20972
+GO:BP	GO:0009653	anatomical structure morphogenesis	0.0014769844230095603	31	2699	96	20972
+KEGG	KEGG:00310	Lysine degradation	0.001970791252805905	5	63	49	8716
+GO:BP	GO:0001568	blood vessel development	0.0024928812816915656	15	727	96	20972
+GO:MF	GO:0140947	histone H3K9me2 methyltransferase activity	0.002824414532887072	3	7	101	20208
+GO:BP	GO:0045893	positive regulation of DNA-templated transcription	0.0032427866723848562	23	1672	96	20972
+GO:BP	GO:1902680	positive regulation of RNA biosynthetic process	0.003310089893875252	23	1674	96	20972
+GO:BP	GO:0001944	vasculature development	0.004182584086370332	15	758	96	20972
+GO:MF	GO:0008134	transcription factor binding	0.005843496771944798	13	597	101	20208
+GO:BP	GO:0048731	system development	0.006730909222898822	38	4023	96	20972
+GO:BP	GO:0072359	circulatory system development	0.008140322868187663	18	1135	96	20972
+GO:BP	GO:0045934	negative regulation of nucleobase-containing compound metabolic process	0.008733206663381425	21	1510	96	20972
+GO:BP	GO:0051254	positive regulation of RNA metabolic process	0.011742204854709247	23	1804	96	20972
+GO:BP	GO:0007179	transforming growth factor beta receptor signaling pathway	0.011808101648530498	8	207	96	20972
+GO:BP	GO:0065007	biological regulation	0.013494081979403584	79	12804	96	20972
+GO:BP	GO:0006357	regulation of transcription by RNA polymerase II	0.013884782678042619	29	2688	96	20972
+GO:BP	GO:0010557	positive regulation of macromolecule biosynthetic process	0.013946154702335123	28	2538	96	20972
+GO:BP	GO:0048871	multicellular organismal-level homeostasis	0.014394978208405386	15	839	96	20972
+GO:BP	GO:0048518	positive regulation of biological process	0.014891644378013345	49	6150	96	20972
+GO:BP	GO:0048513	animal organ development	0.01615569445837882	31	3018	96	20972
+GO:BP	GO:0001525	angiogenesis	0.01751688500593851	12	546	96	20972
+GO:MF	GO:0140297	DNA-binding transcription factor binding	0.020874228140158945	11	485	101	20208
+GO:BP	GO:0035265	organ growth	0.021187945064609033	7	160	96	20972
+GO:BP	GO:0007399	nervous system development	0.021663954024993833	28	2597	96	20972
+GO:BP	GO:0009888	tissue development	0.02206906616349451	24	2014	96	20972
+GO:MF	GO:0046974	histone H3K9 methyltransferase activity	0.022580978670068474	3	13	101	20208
+GO:BP	GO:0009893	positive regulation of metabolic process	0.025963389898290157	33	3410	96	20972
+GO:BP	GO:0009891	positive regulation of biosynthetic process	0.03065510861851493	28	2645	96	20972
+GO:BP	GO:0051253	negative regulation of RNA metabolic process	0.03501162598420874	19	1389	96	20972
+GO:BP	GO:0006366	transcription by RNA polymerase II	0.03718816792676164	29	2827	96	20972
+GO:BP	GO:0010604	positive regulation of macromolecule metabolic process	0.039388121265764776	31	3152	96	20972

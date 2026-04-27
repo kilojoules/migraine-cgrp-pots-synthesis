@@ -1,0 +1,33 @@
+{
+  "config": {
+    "seed": 20260426,
+    "n_permutations": 1000,
+    "background_size": 19567,
+    "background_match": "gene length quintile"
+  },
+  "observed": {
+    "migraine_in_background": 104,
+    "autonomic_in_background": 286,
+    "k_overlap": 2,
+    "overlap_genes": [
+      "ATP2B1",
+      "PLA2G4A"
+    ]
+  },
+  "fisher_exact_one_sided": {
+    "p": 0.45060657702386553,
+    "odds_ratio": 1.3241507870753935
+  },
+  "permutation_null": {
+    "null_mean": 1.879,
+    "null_sd": 1.3439364438711994,
+    "z_score": 0.09003401950427087,
+    "empirical_p_one_sided_over_rep": 0.574,
+    "empirical_p_two_sided": 1.148,
+    "fold_enrichment": 1.06439595529537,
+    "ci95_null": [
+      0.0,
+      5.0
+    ]
+  }
+}

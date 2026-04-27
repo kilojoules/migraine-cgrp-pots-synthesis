@@ -1,0 +1,1500 @@
+{
+  "result": [
+    {
+      "description": "\"A biological process whose specific outcome is the progression of an integrated living unit: an anatomical structure (which may be a subcellular structure, cell, tissue, or organ), or organism over time from an initial condition to a later condition.\" [GOC:isa_complete]",
+      "effective_domain_size": 20972,
+      "goshv": 17240,
+      "intersection_size": 58,
+      "name": "developmental process",
+      "native": "GO:0032502",
+      "p_value": 7.2319008994172545e-06,
+      "parents": [
+        "GO:0008150"
+      ],
+      "precision": 0.6041666666666666,
+      "query": "query_1",
+      "query_size": 96,
+      "recall": 0.008875286916602908,
+      "significant": true,
+      "source": "GO:BP",
+      "term_size": 6535,
+      "source_order": 7117,
+      "group_id": 3
+    },
+    {
+      "description": "\"The biological process whose specific outcome is the progression of an anatomical structure from an initial condition to its mature state. This process begins with the formation of the structure and ends with the mature structure, whatever form that may be including its natural destruction. An anatomical structure is any biological entity that occupies space and is distinguished from its surroundings. Anatomical structures can be macroscopic such as a carpel, or microscopic such as an acrosome.\" [GO_REF:0000021]",
+      "effective_domain_size": 20972,
+      "goshv": 22370,
+      "intersection_size": 54,
+      "name": "anatomical structure development",
+      "native": "GO:0048856",
+      "p_value": 2.2010120491878906e-05,
+      "parents": [
+        "GO:0032502"
+      ],
+      "precision": 0.5625,
+      "query": "query_1",
+      "query_size": 96,
+      "recall": 0.009078681909885675,
+      "significant": true,
+      "source": "GO:BP",
+      "term_size": 5948,
+      "source_order": 12247,
+      "group_id": 3
+    },
+    {
+      "description": "\"The developmental process pertaining to the initial formation of an anatomical structure from unspecified parts. This process begins with the specific processes that contribute to the appearance of the discrete structure and ends when the structural rudiment is recognizable. An anatomical structure is any biological entity that occupies space and is distinguished from its surroundings. Anatomical structures can be macroscopic such as a carpel, or microscopic such as an acrosome.\" [GOC:dph, GOC:jid, GOC:tb]",
+      "effective_domain_size": 20972,
+      "goshv": 22178,
+      "intersection_size": 21,
+      "name": "anatomical structure formation involved in morphogenesis",
+      "native": "GO:0048646",
+      "p_value": 0.00017889007144126592,
+      "parents": [
+        "GO:0009653",
+        "GO:0032502"
+      ],
+      "precision": 0.21875,
+      "query": "query_1",
+      "query_size": 96,
+      "recall": 0.01764705882352941,
+      "significant": true,
+      "source": "GO:BP",
+      "term_size": 1190,
+      "source_order": 12055,
+      "group_id": 3
+    },
+    {
+      "description": "\"Any process that activates or increases the frequency, rate or extent of transcription from an RNA polymerase II promoter.\" [GOC:go_curators, GOC:txnOH]",
+      "effective_domain_size": 20972,
+      "goshv": 21081,
+      "intersection_size": 21,
+      "name": "positive regulation of transcription by RNA polymerase II",
+      "native": "GO:0045944",
+      "p_value": 0.000343357988026965,
+      "parents": [
+        "GO:0006357",
+        "GO:0006366",
+        "GO:0045893"
+      ],
+      "precision": 0.21875,
+      "query": "query_1",
+      "query_size": 96,
+      "recall": 0.016976556184316895,
+      "significant": true,
+      "source": "GO:BP",
+      "term_size": 1237,
+      "source_order": 10958,
+      "group_id": 4
+    },
+    {
+      "description": "\"The process in which the anatomical structures of blood vessels are generated and organized. The blood vessel is the vasculature carrying blood.\" [GOC:jid]",
+      "effective_domain_size": 20972,
+      "goshv": 22073,
+      "intersection_size": 15,
+      "name": "blood vessel morphogenesis",
+      "native": "GO:0048514",
+      "p_value": 0.00042411749119407907,
+      "parents": [
+        "GO:0001568",
+        "GO:0035239"
+      ],
+      "precision": 0.15625,
+      "query": "query_1",
+      "query_size": 96,
+      "recall": 0.023734177215189875,
+      "significant": true,
+      "source": "GO:BP",
+      "term_size": 632,
+      "source_order": 11950,
+      "group_id": 3
+    },
+    {
+      "description": "\"The biological process whose specific outcome is the progression of a multicellular organism over time from an initial condition (e.g. a zygote or a young adult) to a later condition (e.g. a multicellular animal or an aged adult).\" [GOC:dph, GOC:ems, GOC:isa_complete, GOC:tb]",
+      "effective_domain_size": 20972,
+      "goshv": 12789,
+      "intersection_size": 44,
+      "name": "multicellular organism development",
+      "native": "GO:0007275",
+      "p_value": 0.0007023738807198718,
+      "parents": [
+        "GO:0032501",
+        "GO:0048856"
+      ],
+      "precision": 0.4583333333333333,
+      "query": "query_1",
+      "query_size": 96,
+      "recall": 0.009381663113006396,
+      "significant": true,
+      "source": "GO:BP",
+      "term_size": 4690,
+      "source_order": 2666,
+      "group_id": 3
+    },
+    {
+      "description": "\"Any biological process, occurring at the level of a multicellular organism, pertinent to its function.\" [GOC:curators, GOC:dph, GOC:isa_complete, GOC:tb]",
+      "effective_domain_size": 20972,
+      "goshv": 17239,
+      "intersection_size": 58,
+      "name": "multicellular organismal process",
+      "native": "GO:0032501",
+      "p_value": 0.0007514577846098202,
+      "parents": [
+        "GO:0008150"
+      ],
+      "precision": 0.6041666666666666,
+      "query": "query_1",
+      "query_size": 96,
+      "recall": 0.007905138339920948,
+      "significant": true,
+      "source": "GO:BP",
+      "term_size": 7337,
+      "source_order": 7116,
+      "group_id": 3
+    },
+    {
+      "description": "\"The process in which the anatomical structures of a tube are generated and organized. Epithelial and endothelial tubes transport gases, liquids and cells from one site to another and form the basic structure of many organs and tissues, with tube shape and organization varying from the single-celled excretory organ in Caenorhabditis elegans to the branching trees of the mammalian kidney and insect tracheal system.\" [GOC:bf, PMID:14624839]",
+      "effective_domain_size": 20972,
+      "goshv": 18466,
+      "intersection_size": 17,
+      "name": "tube morphogenesis",
+      "native": "GO:0035239",
+      "p_value": 0.0010407562667933948,
+      "parents": [
+        "GO:0009653",
+        "GO:0035295"
+      ],
+      "precision": 0.17708333333333334,
+      "query": "query_1",
+      "query_size": 96,
+      "recall": 0.019384264538198404,
+      "significant": true,
+      "source": "GO:BP",
+      "term_size": 877,
+      "source_order": 8343,
+      "group_id": 3
+    },
+    {
+      "description": "\"The process whose specific outcome is the progression of a tube over time, from its initial formation to a mature structure. Epithelial and endothelial tubes transport gases, liquids and cells from one site to another and form the basic structure of many organs and tissues including lung and trachea, kidney, the mammary gland, the vascular system and the gastrointestinal and urinary-genital tracts.\" [PMID:12526790]",
+      "effective_domain_size": 20972,
+      "goshv": 18497,
+      "intersection_size": 19,
+      "name": "tube development",
+      "native": "GO:0035295",
+      "p_value": 0.0010643756320464015,
+      "parents": [
+        "GO:0007275",
+        "GO:0048856"
+      ],
+      "precision": 0.19791666666666666,
+      "query": "query_1",
+      "query_size": 96,
+      "recall": 0.01736745886654479,
+      "significant": true,
+      "source": "GO:BP",
+      "term_size": 1094,
+      "source_order": 8374,
+      "group_id": 3
+    },
+    {
+      "description": "\"The process in which anatomical structures are generated and organized. Morphogenesis pertains to the creation of form.\" [GOC:go_curators, ISBN:0521436125]",
+      "effective_domain_size": 20972,
+      "goshv": 13537,
+      "intersection_size": 31,
+      "name": "anatomical structure morphogenesis",
+      "native": "GO:0009653",
+      "p_value": 0.0014769844230095603,
+      "parents": [
+        "GO:0032502",
+        "GO:0048856"
+      ],
+      "precision": 0.3229166666666667,
+      "query": "query_1",
+      "query_size": 96,
+      "recall": 0.01148573545757688,
+      "significant": true,
+      "source": "GO:BP",
+      "term_size": 2699,
+      "source_order": 3414,
+      "group_id": 3
+    },
+    {
+      "description": "Lysine degradation",
+      "effective_domain_size": 8716,
+      "goshv": 38773,
+      "intersection_size": 5,
+      "name": "Lysine degradation",
+      "native": "KEGG:00310",
+      "p_value": 0.001970791252805905,
+      "parents": [
+        "KEGG:00000"
+      ],
+      "precision": 0.10204081632653061,
+      "query": "query_1",
+      "query_size": 49,
+      "recall": 0.07936507936507936,
+      "significant": true,
+      "source": "KEGG",
+      "term_size": 63,
+      "source_order": 35,
+      "group_id": 9
+    },
+    {
+      "description": "\"The process whose specific outcome is the progression of a blood vessel over time, from its formation to the mature structure. The blood vessel is the vasculature carrying blood.\" [GOC:hjd, UBERON:0001981]",
+      "effective_domain_size": 20972,
+      "goshv": 10464,
+      "intersection_size": 15,
+      "name": "blood vessel development",
+      "native": "GO:0001568",
+      "p_value": 0.0024928812816915656,
+      "parents": [
+        "GO:0001944",
+        "GO:0048856"
+      ],
+      "precision": 0.15625,
+      "query": "query_1",
+      "query_size": 96,
+      "recall": 0.02063273727647868,
+      "significant": true,
+      "source": "GO:BP",
+      "term_size": 727,
+      "source_order": 341,
+      "group_id": 3
+    },
+    {
+      "description": "\"Catalysis of the reaction: N6,N6-dimethyl-L-lysyl9-[histone H3] + S-adenosyl-L-methionine = H+ + N6,N6,N6-trimethyl-L-lysyl9-[histone H3] + S-adenosyl-L-homocysteine. This reaction is the addition of a single methyl group to the dimethylated lysine residue at position 9 of histone H3, producing histone H3K9me3.\" [RHEA:60288]",
+      "effective_domain_size": 20208,
+      "goshv": 9559,
+      "intersection_size": 3,
+      "name": "histone H3K9me2 methyltransferase activity",
+      "native": "GO:0140947",
+      "p_value": 0.002824414532887072,
+      "parents": [
+        "GO:0046974"
+      ],
+      "precision": 0.0297029702970297,
+      "query": "query_1",
+      "query_size": 101,
+      "recall": 0.42857142857142855,
+      "significant": true,
+      "source": "GO:MF",
+      "term_size": 7,
+      "source_order": 9559,
+      "group_id": 1
+    },
+    {
+      "description": "\"Any process that activates or increases the frequency, rate or extent of cellular DNA-templated transcription.\" [GOC:go_curators, GOC:txnOH]",
+      "effective_domain_size": 20972,
+      "goshv": 21039,
+      "intersection_size": 23,
+      "name": "positive regulation of DNA-templated transcription",
+      "native": "GO:0045893",
+      "p_value": 0.0032427866723848562,
+      "parents": [
+        "GO:0006351",
+        "GO:0006355",
+        "GO:1902680"
+      ],
+      "precision": 0.23958333333333334,
+      "query": "query_1",
+      "query_size": 96,
+      "recall": 0.01375598086124402,
+      "significant": true,
+      "source": "GO:BP",
+      "term_size": 1672,
+      "source_order": 10916,
+      "group_id": 4
+    },
+    {
+      "description": "\"Any process that activates or increases the frequency, rate or extent of RNA biosynthetic process.\" [GO:jl, GO_REF:0000058, GOC:TermGenie]",
+      "effective_domain_size": 20972,
+      "goshv": 31018,
+      "intersection_size": 23,
+      "name": "positive regulation of RNA biosynthetic process",
+      "native": "GO:1902680",
+      "p_value": 0.003310089893875252,
+      "parents": [
+        "GO:0010557",
+        "GO:0032774",
+        "GO:0051254",
+        "GO:2001141"
+      ],
+      "precision": 0.23958333333333334,
+      "query": "query_1",
+      "query_size": 96,
+      "recall": 0.013739545997610514,
+      "significant": true,
+      "source": "GO:BP",
+      "term_size": 1674,
+      "source_order": 20895,
+      "group_id": 4
+    },
+    {
+      "description": "\"The process whose specific outcome is the progression of the vasculature over time, from its formation to the mature structure. The vasculature is an interconnected tubular multi-tissue structure that contains fluid that is actively transported around the organism.\" [GOC:dph, UBERON:0002409]",
+      "effective_domain_size": 20972,
+      "goshv": 10665,
+      "intersection_size": 15,
+      "name": "vasculature development",
+      "native": "GO:0001944",
+      "p_value": 0.004182584086370332,
+      "parents": [
+        "GO:0048731",
+        "GO:0072359"
+      ],
+      "precision": 0.15625,
+      "query": "query_1",
+      "query_size": 96,
+      "recall": 0.01978891820580475,
+      "significant": true,
+      "source": "GO:BP",
+      "term_size": 758,
+      "source_order": 542,
+      "group_id": 3
+    },
+    {
+      "description": "\"Binding to a transcription factor, a protein required to initiate or regulate transcription.\" [ISBN:0198506732]",
+      "effective_domain_size": 20208,
+      "goshv": 1534,
+      "intersection_size": 13,
+      "name": "transcription factor binding",
+      "native": "GO:0008134",
+      "p_value": 0.005843496771944798,
+      "parents": [
+        "GO:0005515"
+      ],
+      "precision": 0.12871287128712872,
+      "query": "query_1",
+      "query_size": 101,
+      "recall": 0.021775544388609715,
+      "significant": true,
+      "source": "GO:MF",
+      "term_size": 597,
+      "source_order": 1534,
+      "group_id": 2
+    },
+    {
+      "description": "\"The process whose specific outcome is the progression of an organismal system over time, from its formation to the mature structure. A system is a regularly interacting or interdependent group of organs or tissues that work together to carry out a given biological process.\" [GOC:dph, GOC:jid]",
+      "effective_domain_size": 20972,
+      "goshv": 22261,
+      "intersection_size": 38,
+      "name": "system development",
+      "native": "GO:0048731",
+      "p_value": 0.006730909222898822,
+      "parents": [
+        "GO:0007275",
+        "GO:0048856"
+      ],
+      "precision": 0.3958333333333333,
+      "query": "query_1",
+      "query_size": 96,
+      "recall": 0.009445687298036291,
+      "significant": true,
+      "source": "GO:BP",
+      "term_size": 4023,
+      "source_order": 12138,
+      "group_id": 3
+    },
+    {
+      "description": "\"The process whose specific outcome is the progression of the circulatory system over time, from its formation to the mature structure. The circulatory system is the organ system that passes nutrients (such as amino acids and electrolytes), gases, hormones, blood cells, etc. to and from cells in the body to help fight diseases and help stabilize body temperature and pH to maintain homeostasis.\" [GOC:mah, UBERON:0001009]",
+      "effective_domain_size": 20972,
+      "goshv": 26320,
+      "intersection_size": 18,
+      "name": "circulatory system development",
+      "native": "GO:0072359",
+      "p_value": 0.008140322868187663,
+      "parents": [
+        "GO:0048731"
+      ],
+      "precision": 0.1875,
+      "query": "query_1",
+      "query_size": 96,
+      "recall": 0.015859030837004406,
+      "significant": true,
+      "source": "GO:BP",
+      "term_size": 1135,
+      "source_order": 16197,
+      "group_id": 3
+    },
+    {
+      "description": "\"Any cellular process that stops, prevents, or reduces the frequency, rate or extent of the chemical reactions and pathways involving nucleobases, nucleosides, nucleotides and nucleic acids.\" [GOC:go_curators]",
+      "effective_domain_size": 20972,
+      "goshv": 21073,
+      "intersection_size": 21,
+      "name": "negative regulation of nucleobase-containing compound metabolic process",
+      "native": "GO:0045934",
+      "p_value": 0.008733206663381425,
+      "parents": [
+        "GO:0006139",
+        "GO:0009892",
+        "GO:0019219"
+      ],
+      "precision": 0.21875,
+      "query": "query_1",
+      "query_size": 96,
+      "recall": 0.01390728476821192,
+      "significant": true,
+      "source": "GO:BP",
+      "term_size": 1510,
+      "source_order": 10950,
+      "group_id": 5
+    },
+    {
+      "description": "\"Any process that activates or increases the frequency, rate or extent of the chemical reactions and pathways involving RNA.\" [GOC:ai]",
+      "effective_domain_size": 20972,
+      "goshv": 22826,
+      "intersection_size": 23,
+      "name": "positive regulation of RNA metabolic process",
+      "native": "GO:0051254",
+      "p_value": 0.011742204854709247,
+      "parents": [
+        "GO:0010604",
+        "GO:0016070",
+        "GO:0051252"
+      ],
+      "precision": 0.23958333333333334,
+      "query": "query_1",
+      "query_size": 96,
+      "recall": 0.012749445676274944,
+      "significant": true,
+      "source": "GO:BP",
+      "term_size": 1804,
+      "source_order": 12703,
+      "group_id": 4
+    },
+    {
+      "description": "\"The series of molecular signals initiated by an extracellular ligand binding to a transforming growth factor beta receptor on the surface of a target cell, and ending with the regulation of a downstream cellular process, e.g. transcription.\" [GOC:BHF, GOC:mah, GOC:signaling]",
+      "effective_domain_size": 20972,
+      "goshv": 12729,
+      "intersection_size": 8,
+      "name": "transforming growth factor beta receptor signaling pathway",
+      "native": "GO:0007179",
+      "p_value": 0.011808101648530498,
+      "parents": [
+        "GO:0071560",
+        "GO:0141091"
+      ],
+      "precision": 0.08333333333333333,
+      "query": "query_1",
+      "query_size": 96,
+      "recall": 0.03864734299516908,
+      "significant": true,
+      "source": "GO:BP",
+      "term_size": 207,
+      "source_order": 2606,
+      "group_id": 6
+    },
+    {
+      "description": "\"Any process that modulates a measurable attribute of any biological process, quality or function.\" [GOC:dph, GOC:isa_complete, GOC:mah, GOC:pr, GOC:vw]",
+      "effective_domain_size": 20972,
+      "goshv": 24907,
+      "intersection_size": 79,
+      "name": "biological regulation",
+      "native": "GO:0065007",
+      "p_value": 0.013494081979403584,
+      "parents": [
+        "GO:0008150"
+      ],
+      "precision": 0.8229166666666666,
+      "query": "query_1",
+      "query_size": 96,
+      "recall": 0.0061699468915963765,
+      "significant": true,
+      "source": "GO:BP",
+      "term_size": 12804,
+      "source_order": 14784,
+      "group_id": 7
+    },
+    {
+      "description": "\"Any process that modulates the frequency, rate or extent of transcription mediated by RNA polymerase II.\" [GOC:go_curators, GOC:txnOH]",
+      "effective_domain_size": 20972,
+      "goshv": 12149,
+      "intersection_size": 29,
+      "name": "regulation of transcription by RNA polymerase II",
+      "native": "GO:0006357",
+      "p_value": 0.013884782678042619,
+      "parents": [
+        "GO:0006355",
+        "GO:0006366"
+      ],
+      "precision": 0.3020833333333333,
+      "query": "query_1",
+      "query_size": 96,
+      "recall": 0.010788690476190476,
+      "significant": true,
+      "source": "GO:BP",
+      "term_size": 2688,
+      "source_order": 2026,
+      "group_id": 4
+    },
+    {
+      "description": "\"Any process that increases the rate, frequency or extent of the chemical reactions and pathways resulting in the formation of a macromolecule, any molecule of high relative molecular mass, the structure of which essentially comprises the multiple repetition of units derived, actually or conceptually, from molecules of low relative molecular mass.\" [GOC:dph, GOC:tb]",
+      "effective_domain_size": 20972,
+      "goshv": 14147,
+      "intersection_size": 28,
+      "name": "positive regulation of macromolecule biosynthetic process",
+      "native": "GO:0010557",
+      "p_value": 0.013946154702335123,
+      "parents": [
+        "GO:0009059",
+        "GO:0009891",
+        "GO:0010556",
+        "GO:0010604"
+      ],
+      "precision": 0.2916666666666667,
+      "query": "query_1",
+      "query_size": 96,
+      "recall": 0.01103230890464933,
+      "significant": true,
+      "source": "GO:BP",
+      "term_size": 2538,
+      "source_order": 4024,
+      "group_id": 4
+    },
+    {
+      "description": "\"Any process involved in the maintenance of an internal steady state at the level of the multicellular organism.\" [GOC:isa_complete]",
+      "effective_domain_size": 20972,
+      "goshv": 22384,
+      "intersection_size": 15,
+      "name": "multicellular organismal-level homeostasis",
+      "native": "GO:0048871",
+      "p_value": 0.014394978208405386,
+      "parents": [
+        "GO:0032501",
+        "GO:0042592"
+      ],
+      "precision": 0.15625,
+      "query": "query_1",
+      "query_size": 96,
+      "recall": 0.017878426698450536,
+      "significant": true,
+      "source": "GO:BP",
+      "term_size": 839,
+      "source_order": 12261,
+      "group_id": 3
+    },
+    {
+      "description": "\"Any process that activates or increases the frequency, rate or extent of a biological process. Biological processes are regulated by many means; examples include the control of gene expression, protein modification or interaction with a protein or substrate molecule.\" [GOC:jid]",
+      "effective_domain_size": 20972,
+      "goshv": 22075,
+      "intersection_size": 49,
+      "name": "positive regulation of biological process",
+      "native": "GO:0048518",
+      "p_value": 0.014891644378013345,
+      "parents": [
+        "GO:0008150",
+        "GO:0050789"
+      ],
+      "precision": 0.5104166666666666,
+      "query": "query_1",
+      "query_size": 96,
+      "recall": 0.007967479674796748,
+      "significant": true,
+      "source": "GO:BP",
+      "term_size": 6150,
+      "source_order": 11952,
+      "group_id": 8
+    },
+    {
+      "description": "\"Development of a tissue or tissues that work together to perform a specific function or functions. Development pertains to the process whose specific outcome is the progression of a structure over time, from its formation to the mature structure. Organs are commonly observed as visibly distinct structures, but may also exist as loosely associated clusters of cells that work together to perform a specific function or functions.\" [GOC:dph, GOC:jid]",
+      "effective_domain_size": 20972,
+      "goshv": 22072,
+      "intersection_size": 31,
+      "name": "animal organ development",
+      "native": "GO:0048513",
+      "p_value": 0.01615569445837882,
+      "parents": [
+        "GO:0048856"
+      ],
+      "precision": 0.3229166666666667,
+      "query": "query_1",
+      "query_size": 96,
+      "recall": 0.01027170311464546,
+      "significant": true,
+      "source": "GO:BP",
+      "term_size": 3018,
+      "source_order": 11949,
+      "group_id": 3
+    },
+    {
+      "description": "\"Blood vessel formation when new vessels emerge from the proliferation of pre-existing blood vessels.\" [ISBN:0878932453]",
+      "effective_domain_size": 20972,
+      "goshv": 10441,
+      "intersection_size": 12,
+      "name": "angiogenesis",
+      "native": "GO:0001525",
+      "p_value": 0.01751688500593851,
+      "parents": [
+        "GO:0048514",
+        "GO:0048646"
+      ],
+      "precision": 0.125,
+      "query": "query_1",
+      "query_size": 96,
+      "recall": 0.02197802197802198,
+      "significant": true,
+      "source": "GO:BP",
+      "term_size": 546,
+      "source_order": 318,
+      "group_id": 3
+    },
+    {
+      "description": "\"Binding to a DNA-binding transcription factor, a protein that interacts with a specific DNA sequence (sometimes referred to as a motif) within the regulatory region of a gene to modulate transcription.\" [GOC:txnOH-2018]",
+      "effective_domain_size": 20208,
+      "goshv": 9258,
+      "intersection_size": 11,
+      "name": "DNA-binding transcription factor binding",
+      "native": "GO:0140297",
+      "p_value": 0.020874228140158945,
+      "parents": [
+        "GO:0008134"
+      ],
+      "precision": 0.10891089108910891,
+      "query": "query_1",
+      "query_size": 101,
+      "recall": 0.02268041237113402,
+      "significant": true,
+      "source": "GO:MF",
+      "term_size": 485,
+      "source_order": 9258,
+      "group_id": 2
+    },
+    {
+      "description": "\"The increase in size or mass of an organ. Organs are commonly observed as visibly distinct structures, but may also exist as loosely associated clusters of cells that function together as to perform a specific function.\" [GOC:bf, ISBN:0471245208, ISBN:0721662544]",
+      "effective_domain_size": 20972,
+      "goshv": 18475,
+      "intersection_size": 7,
+      "name": "organ growth",
+      "native": "GO:0035265",
+      "p_value": 0.021187945064609033,
+      "parents": [
+        "GO:0032501",
+        "GO:0048589"
+      ],
+      "precision": 0.07291666666666667,
+      "query": "query_1",
+      "query_size": 96,
+      "recall": 0.04375,
+      "significant": true,
+      "source": "GO:BP",
+      "term_size": 160,
+      "source_order": 8352,
+      "group_id": 3
+    },
+    {
+      "description": "\"The process whose specific outcome is the progression of nervous tissue over time, from its formation to its mature state.\" [GOC:dgh]",
+      "effective_domain_size": 20972,
+      "goshv": 12885,
+      "intersection_size": 28,
+      "name": "nervous system development",
+      "native": "GO:0007399",
+      "p_value": 0.021663954024993833,
+      "parents": [
+        "GO:0048731"
+      ],
+      "precision": 0.2916666666666667,
+      "query": "query_1",
+      "query_size": 96,
+      "recall": 0.01078167115902965,
+      "significant": true,
+      "source": "GO:BP",
+      "term_size": 2597,
+      "source_order": 2762,
+      "group_id": 3
+    },
+    {
+      "description": "\"The process whose specific outcome is the progression of a tissue over time, from its formation to the mature structure.\" [ISBN:0471245208]",
+      "effective_domain_size": 20972,
+      "goshv": 13710,
+      "intersection_size": 24,
+      "name": "tissue development",
+      "native": "GO:0009888",
+      "p_value": 0.02206906616349451,
+      "parents": [
+        "GO:0048856"
+      ],
+      "precision": 0.25,
+      "query": "query_1",
+      "query_size": 96,
+      "recall": 0.011916583912611719,
+      "significant": true,
+      "source": "GO:BP",
+      "term_size": 2014,
+      "source_order": 3587,
+      "group_id": 3
+    },
+    {
+      "description": "\"Catalysis of the reaction: S-adenosyl-L-methionine + histone H3 L-lysine (position 9) = S-adenosyl-L-homocysteine + histone H3 N6-methyl-L-lysine (position 9). This reaction is the addition of up to three methyl groups to the lysine residue at position 9 of the histone H3 protein.\" [GOC:ai]",
+      "effective_domain_size": 20208,
+      "goshv": 5661,
+      "intersection_size": 3,
+      "name": "histone H3K9 methyltransferase activity",
+      "native": "GO:0046974",
+      "p_value": 0.022580978670068474,
+      "parents": [
+        "GO:0016279",
+        "GO:0140938"
+      ],
+      "precision": 0.0297029702970297,
+      "query": "query_1",
+      "query_size": 101,
+      "recall": 0.23076923076923078,
+      "significant": true,
+      "source": "GO:MF",
+      "term_size": 13,
+      "source_order": 5661,
+      "group_id": 1
+    },
+    {
+      "description": "\"Any process that activates or increases the frequency, rate or extent of the chemical reactions and pathways within a cell or an organism.\" [GOC:go_curators]",
+      "effective_domain_size": 20972,
+      "goshv": 13715,
+      "intersection_size": 33,
+      "name": "positive regulation of metabolic process",
+      "native": "GO:0009893",
+      "p_value": 0.025963389898290157,
+      "parents": [
+        "GO:0008152",
+        "GO:0019222",
+        "GO:0048522"
+      ],
+      "precision": 0.34375,
+      "query": "query_1",
+      "query_size": 96,
+      "recall": 0.00967741935483871,
+      "significant": true,
+      "source": "GO:BP",
+      "term_size": 3410,
+      "source_order": 3592,
+      "group_id": 4
+    },
+    {
+      "description": "\"Any process that activates or increases the frequency, rate or extent of the chemical reactions and pathways resulting in the formation of substances.\" [GOC:go_curators]",
+      "effective_domain_size": 20972,
+      "goshv": 13713,
+      "intersection_size": 28,
+      "name": "positive regulation of biosynthetic process",
+      "native": "GO:0009891",
+      "p_value": 0.03065510861851493,
+      "parents": [
+        "GO:0009058",
+        "GO:0009889",
+        "GO:0009893"
+      ],
+      "precision": 0.2916666666666667,
+      "query": "query_1",
+      "query_size": 96,
+      "recall": 0.01058601134215501,
+      "significant": true,
+      "source": "GO:BP",
+      "term_size": 2645,
+      "source_order": 3590,
+      "group_id": 4
+    },
+    {
+      "description": "\"Any process that stops, prevents, or reduces the frequency, rate or extent of the chemical reactions and pathways involving RNA.\" [GOC:ai]",
+      "effective_domain_size": 20972,
+      "goshv": 22825,
+      "intersection_size": 19,
+      "name": "negative regulation of RNA metabolic process",
+      "native": "GO:0051253",
+      "p_value": 0.03501162598420874,
+      "parents": [
+        "GO:0010605",
+        "GO:0016070",
+        "GO:0045934",
+        "GO:0051252"
+      ],
+      "precision": 0.19791666666666666,
+      "query": "query_1",
+      "query_size": 96,
+      "recall": 0.013678905687544997,
+      "significant": true,
+      "source": "GO:BP",
+      "term_size": 1389,
+      "source_order": 12702,
+      "group_id": 5
+    },
+    {
+      "description": "\"The synthesis of RNA from a DNA template by RNA polymerase II (RNAP II), originating at an RNA polymerase II promoter. Includes transcription of messenger RNA (mRNA) and certain small nuclear RNAs (snRNAs).\" [GOC:jl, GOC:txnOH, ISBN:0321000382]",
+      "effective_domain_size": 20972,
+      "goshv": 12156,
+      "intersection_size": 29,
+      "name": "transcription by RNA polymerase II",
+      "native": "GO:0006366",
+      "p_value": 0.03718816792676164,
+      "parents": [
+        "GO:0006351"
+      ],
+      "precision": 0.3020833333333333,
+      "query": "query_1",
+      "query_size": 96,
+      "recall": 0.010258224266006368,
+      "significant": true,
+      "source": "GO:BP",
+      "term_size": 2827,
+      "source_order": 2033,
+      "group_id": 4
+    },
+    {
+      "description": "\"Any process that increases the frequency, rate or extent of the chemical reactions and pathways involving macromolecules, any molecule of high relative molecular mass, the structure of which essentially comprises the multiple repetition of units derived, actually or conceptually, from molecules of low relative molecular mass.\" [GOC:dph, GOC:tb]",
+      "effective_domain_size": 20972,
+      "goshv": 14188,
+      "intersection_size": 31,
+      "name": "positive regulation of macromolecule metabolic process",
+      "native": "GO:0010604",
+      "p_value": 0.039388121265764776,
+      "parents": [
+        "GO:0009893",
+        "GO:0043170",
+        "GO:0060255"
+      ],
+      "precision": 0.3229166666666667,
+      "query": "query_1",
+      "query_size": 96,
+      "recall": 0.00983502538071066,
+      "significant": true,
+      "source": "GO:BP",
+      "term_size": 3152,
+      "source_order": 4065,
+      "group_id": 4
+    }
+  ],
+  "meta": {
+    "query_metadata": {
+      "queries": {
+        "query_1": [
+          "ABHD17C",
+          "AC006547.14",
+          "AC064865.1",
+          "ADAMTSL4",
+          "AMBRA1",
+          "ANKDD1B",
+          "ANKRD36C",
+          "ARID4A",
+          "ASTN2",
+          "ATP2B1",
+          "ATRIP",
+          "B9D2|TMEM91",
+          "C1orf87",
+          "C20orf112",
+          "C3orf38",
+          "CACNA1A",
+          "CADM2",
+          "CAMTA1",
+          "CARF",
+          "CFDP1",
+          "CNNM2",
+          "COL4A1",
+          "DLST",
+          "EHMT1",
+          "EHMT2",
+          "FAM47A",
+          "FECH",
+          "FGF6",
+          "FHL5",
+          "GJA1",
+          "GPR149",
+          "GPR26",
+          "HMOX2",
+          "HNRNPA3P8",
+          "HOXB3",
+          "HOXD10",
+          "HPSE2",
+          "HTRA1",
+          "IER3",
+          "IFT43",
+          "INPP5A",
+          "INPP5B",
+          "INSC",
+          "ITGB5",
+          "ITPK1",
+          "JAG1",
+          "KCNK5",
+          "KIF26B",
+          "KRT19P1",
+          "LEPR",
+          "LRCH1",
+          "LRFN5",
+          "LRP1",
+          "MACF1",
+          "MAPKAPK2",
+          "MED14",
+          "MEF2D",
+          "MLLT10",
+          "MLXIPL",
+          "MPPED2",
+          "MRC2",
+          "MRGPRE",
+          "MRPS6",
+          "MRVI1",
+          "MYO3B",
+          "NCOR2",
+          "NFIB",
+          "NKX2-5",
+          "NSD1",
+          "PCMT1",
+          "PDZRN4",
+          "PHACTR1",
+          "PLA2G4A",
+          "PLCE1",
+          "POU4F3",
+          "PRDM16",
+          "PRL",
+          "PTK2B",
+          "RAB3IL1",
+          "RABGAP1L",
+          "RBBP8",
+          "RBM14-RBM4|RBM4",
+          "RBM20",
+          "REV3L",
+          "RNA5SP299",
+          "RNF213",
+          "RNF219-AS1",
+          "RNU6-546P",
+          "RP11-373A6.1",
+          "RP11-384J4.2",
+          "RP11-573J24.1",
+          "RP11-690J15.1",
+          "RP11-81K2.1",
+          "RP4-598G3.1",
+          "RUNX1",
+          "SEC63P2",
+          "SERPINA1",
+          "SKOR2",
+          "SLC24A3",
+          "SMG6",
+          "SNX24",
+          "SPATA19",
+          "SPINK2",
+          "SSBP2",
+          "SUGCT",
+          "SUGP1",
+          "TBC1D16",
+          "TGFBR2",
+          "TGFBR3",
+          "THADA",
+          "TIGD6|HMGXB3",
+          "TJP2",
+          "TMEM51",
+          "TRPM8",
+          "TSPAN12",
+          "TSPAN2",
+          "YAP1",
+          "ZBTB4",
+          "ZCCHC14",
+          "ZEB2",
+          "ZMYND8",
+          "ZNF462",
+          "ZNF474"
+        ]
+      },
+      "organism": "hsapiens",
+      "all_results": false,
+      "ordered": false,
+      "no_iea": false,
+      "sources": [
+        "GO:MF",
+        "GO:BP",
+        "KEGG",
+        "REAC"
+      ],
+      "combined": false,
+      "aresolve": {},
+      "numeric_ns": "ENTREZGENE_ACC",
+      "domain_scope": "annotated",
+      "measure_underrepresentation": false,
+      "significance_threshold_method": "g_SCS",
+      "user_threshold": 0.05,
+      "no_evidences": true,
+      "highlight": null
+    },
+    "result_metadata": {
+      "GO:MF": {
+        "domain_size": 20208,
+        "number_of_terms": 10123,
+        "threshold": 7.4e-05
+      },
+      "GO:BP": {
+        "domain_size": 20972,
+        "number_of_terms": 24546,
+        "threshold": 2.1e-05
+      },
+      "KEGG": {
+        "domain_size": 8716,
+        "number_of_terms": 586,
+        "threshold": 0.000636
+      },
+      "REAC": {
+        "domain_size": 11056,
+        "number_of_terms": 2849,
+        "threshold": 0.000119
+      }
+    },
+    "genes_metadata": {
+      "failed": [
+        "AC006547.14",
+        "AC064865.1",
+        "B9D2|TMEM91",
+        "C20orf112",
+        "MRVI1",
+        "RBM14-RBM4|RBM4",
+        "RNF219-AS1",
+        "RP11-373A6.1",
+        "RP11-384J4.2",
+        "RP11-573J24.1",
+        "RP11-690J15.1",
+        "RP11-81K2.1",
+        "RP4-598G3.1",
+        "TIGD6|HMGXB3"
+      ],
+      "ambiguous": {},
+      "duplicates": [],
+      "query": {
+        "query_1": {
+          "mapping": {
+            "ABHD17C": [
+              "ENSG00000136379"
+            ],
+            "ADAMTSL4": [
+              "ENSG00000143382"
+            ],
+            "AMBRA1": [
+              "ENSG00000110497"
+            ],
+            "ANKDD1B": [
+              "ENSG00000189045"
+            ],
+            "ANKRD36C": [
+              "ENSG00000174501"
+            ],
+            "ARID4A": [
+              "ENSG00000032219"
+            ],
+            "ASTN2": [
+              "ENSG00000148219"
+            ],
+            "ATP2B1": [
+              "ENSG00000070961"
+            ],
+            "ATRIP": [
+              "ENSG00000164053"
+            ],
+            "C1orf87": [
+              "ENSG00000162598"
+            ],
+            "C3orf38": [
+              "ENSG00000179021"
+            ],
+            "CACNA1A": [
+              "ENSG00000141837"
+            ],
+            "CADM2": [
+              "ENSG00000175161"
+            ],
+            "CAMTA1": [
+              "ENSG00000171735"
+            ],
+            "CARF": [
+              "ENSG00000138380"
+            ],
+            "CFDP1": [
+              "ENSG00000153774"
+            ],
+            "CNNM2": [
+              "ENSG00000148842"
+            ],
+            "COL4A1": [
+              "ENSG00000187498"
+            ],
+            "DLST": [
+              "ENSG00000119689"
+            ],
+            "EHMT1": [
+              "ENSG00000181090"
+            ],
+            "EHMT2": [
+              "ENSG00000204371"
+            ],
+            "FAM47A": [
+              "ENSG00000185448"
+            ],
+            "FECH": [
+              "ENSG00000066926"
+            ],
+            "FGF6": [
+              "ENSG00000111241"
+            ],
+            "FHL5": [
+              "ENSG00000112214"
+            ],
+            "GJA1": [
+              "ENSG00000152661"
+            ],
+            "GPR149": [
+              "ENSG00000174948"
+            ],
+            "GPR26": [
+              "ENSG00000154478"
+            ],
+            "HMOX2": [
+              "ENSG00000103415"
+            ],
+            "HNRNPA3P8": [
+              "ENSG00000239699"
+            ],
+            "HOXB3": [
+              "ENSG00000120093"
+            ],
+            "HOXD10": [
+              "ENSG00000128710"
+            ],
+            "HPSE2": [
+              "ENSG00000172987"
+            ],
+            "HTRA1": [
+              "ENSG00000166033"
+            ],
+            "IER3": [
+              "ENSG00000137331"
+            ],
+            "IFT43": [
+              "ENSG00000119650"
+            ],
+            "INPP5A": [
+              "ENSG00000068383"
+            ],
+            "INPP5B": [
+              "ENSG00000204084"
+            ],
+            "INSC": [
+              "ENSG00000188487"
+            ],
+            "ITGB5": [
+              "ENSG00000082781"
+            ],
+            "ITPK1": [
+              "ENSG00000100605"
+            ],
+            "JAG1": [
+              "ENSG00000101384"
+            ],
+            "KCNK5": [
+              "ENSG00000164626"
+            ],
+            "KIF26B": [
+              "ENSG00000162849"
+            ],
+            "KRT19P1": [
+              "ENSG00000218014"
+            ],
+            "LEPR": [
+              "ENSG00000116678"
+            ],
+            "LRCH1": [
+              "ENSG00000136141"
+            ],
+            "LRFN5": [
+              "ENSG00000165379"
+            ],
+            "LRP1": [
+              "ENSG00000123384"
+            ],
+            "MACF1": [
+              "ENSG00000127603"
+            ],
+            "MAPKAPK2": [
+              "ENSG00000162889"
+            ],
+            "MED14": [
+              "ENSG00000180182"
+            ],
+            "MEF2D": [
+              "ENSG00000116604"
+            ],
+            "MLLT10": [
+              "ENSG00000078403"
+            ],
+            "MLXIPL": [
+              "ENSG00000009950"
+            ],
+            "MPPED2": [
+              "ENSG00000066382"
+            ],
+            "MRC2": [
+              "ENSG00000011028"
+            ],
+            "MRGPRE": [
+              "ENSG00000184350"
+            ],
+            "MRPS6": [
+              "ENSG00000243927"
+            ],
+            "MYO3B": [
+              "ENSG00000071909"
+            ],
+            "NCOR2": [
+              "ENSG00000196498"
+            ],
+            "NFIB": [
+              "ENSG00000147862"
+            ],
+            "NKX2-5": [
+              "ENSG00000183072"
+            ],
+            "NSD1": [
+              "ENSG00000165671"
+            ],
+            "PCMT1": [
+              "ENSG00000120265"
+            ],
+            "PDZRN4": [
+              "ENSG00000165966"
+            ],
+            "PHACTR1": [
+              "ENSG00000112137"
+            ],
+            "PLA2G4A": [
+              "ENSG00000116711"
+            ],
+            "PLCE1": [
+              "ENSG00000138193"
+            ],
+            "POU4F3": [
+              "ENSG00000091010"
+            ],
+            "PRDM16": [
+              "ENSG00000142611"
+            ],
+            "PRL": [
+              "ENSG00000172179"
+            ],
+            "PTK2B": [
+              "ENSG00000120899"
+            ],
+            "RAB3IL1": [
+              "ENSG00000167994"
+            ],
+            "RABGAP1L": [
+              "ENSG00000152061"
+            ],
+            "RBBP8": [
+              "ENSG00000101773"
+            ],
+            "RBM20": [
+              "ENSG00000203867"
+            ],
+            "REV3L": [
+              "ENSG00000009413"
+            ],
+            "RNA5SP299": [
+              "ENSG00000212505"
+            ],
+            "RNF213": [
+              "ENSG00000173821"
+            ],
+            "RNU6-546P": [
+              "ENSG00000206718"
+            ],
+            "RUNX1": [
+              "ENSG00000159216"
+            ],
+            "SEC63P2": [
+              "ENSG00000250416"
+            ],
+            "SERPINA1": [
+              "ENSG00000197249"
+            ],
+            "SKOR2": [
+              "ENSG00000215474"
+            ],
+            "SLC24A3": [
+              "ENSG00000185052"
+            ],
+            "SMG6": [
+              "ENSG00000070366"
+            ],
+            "SNX24": [
+              "ENSG00000064652"
+            ],
+            "SPATA19": [
+              "ENSG00000166118"
+            ],
+            "SPINK2": [
+              "ENSG00000128040"
+            ],
+            "SSBP2": [
+              "ENSG00000145687"
+            ],
+            "SUGCT": [
+              "ENSG00000175600"
+            ],
+            "SUGP1": [
+              "ENSG00000105705"
+            ],
+            "TBC1D16": [
+              "ENSG00000167291"
+            ],
+            "TGFBR2": [
+              "ENSG00000163513"
+            ],
+            "TGFBR3": [
+              "ENSG00000069702"
+            ],
+            "THADA": [
+              "ENSG00000115970"
+            ],
+            "TJP2": [
+              "ENSG00000119139"
+            ],
+            "TMEM51": [
+              "ENSG00000171729"
+            ],
+            "TRPM8": [
+              "ENSG00000144481"
+            ],
+            "TSPAN12": [
+              "ENSG00000106025"
+            ],
+            "TSPAN2": [
+              "ENSG00000134198"
+            ],
+            "YAP1": [
+              "ENSG00000137693"
+            ],
+            "ZBTB4": [
+              "ENSG00000174282"
+            ],
+            "ZCCHC14": [
+              "ENSG00000140948"
+            ],
+            "ZEB2": [
+              "ENSG00000169554"
+            ],
+            "ZMYND8": [
+              "ENSG00000101040"
+            ],
+            "ZNF462": [
+              "ENSG00000148143"
+            ],
+            "ZNF474": [
+              "ENSG00000164185"
+            ]
+          },
+          "ensgs": [
+            "ENSG00000136379",
+            "ENSG00000143382",
+            "ENSG00000110497",
+            "ENSG00000189045",
+            "ENSG00000174501",
+            "ENSG00000032219",
+            "ENSG00000148219",
+            "ENSG00000070961",
+            "ENSG00000164053",
+            "ENSG00000162598",
+            "ENSG00000179021",
+            "ENSG00000141837",
+            "ENSG00000175161",
+            "ENSG00000171735",
+            "ENSG00000138380",
+            "ENSG00000153774",
+            "ENSG00000148842",
+            "ENSG00000187498",
+            "ENSG00000119689",
+            "ENSG00000181090",
+            "ENSG00000204371",
+            "ENSG00000185448",
+            "ENSG00000066926",
+            "ENSG00000111241",
+            "ENSG00000112214",
+            "ENSG00000152661",
+            "ENSG00000174948",
+            "ENSG00000154478",
+            "ENSG00000103415",
+            "ENSG00000239699",
+            "ENSG00000120093",
+            "ENSG00000128710",
+            "ENSG00000172987",
+            "ENSG00000166033",
+            "ENSG00000137331",
+            "ENSG00000119650",
+            "ENSG00000068383",
+            "ENSG00000204084",
+            "ENSG00000188487",
+            "ENSG00000082781",
+            "ENSG00000100605",
+            "ENSG00000101384",
+            "ENSG00000164626",
+            "ENSG00000162849",
+            "ENSG00000218014",
+            "ENSG00000116678",
+            "ENSG00000136141",
+            "ENSG00000165379",
+            "ENSG00000123384",
+            "ENSG00000127603",
+            "ENSG00000162889",
+            "ENSG00000180182",
+            "ENSG00000116604",
+            "ENSG00000078403",
+            "ENSG00000009950",
+            "ENSG00000066382",
+            "ENSG00000011028",
+            "ENSG00000184350",
+            "ENSG00000243927",
+            "ENSG00000071909",
+            "ENSG00000196498",
+            "ENSG00000147862",
+            "ENSG00000183072",
+            "ENSG00000165671",
+            "ENSG00000120265",
+            "ENSG00000165966",
+            "ENSG00000112137",
+            "ENSG00000116711",
+            "ENSG00000138193",
+            "ENSG00000091010",
+            "ENSG00000142611",
+            "ENSG00000172179",
+            "ENSG00000120899",
+            "ENSG00000167994",
+            "ENSG00000152061",
+            "ENSG00000101773",
+            "ENSG00000203867",
+            "ENSG00000009413",
+            "ENSG00000212505",
+            "ENSG00000173821",
+            "ENSG00000206718",
+            "ENSG00000159216",
+            "ENSG00000250416",
+            "ENSG00000197249",
+            "ENSG00000215474",
+            "ENSG00000185052",
+            "ENSG00000070366",
+            "ENSG00000064652",
+            "ENSG00000166118",
+            "ENSG00000128040",
+            "ENSG00000145687",
+            "ENSG00000175600",
+            "ENSG00000105705",
+            "ENSG00000167291",
+            "ENSG00000163513",
+            "ENSG00000069702",
+            "ENSG00000115970",
+            "ENSG00000119139",
+            "ENSG00000171729",
+            "ENSG00000144481",
+            "ENSG00000106025",
+            "ENSG00000134198",
+            "ENSG00000137693",
+            "ENSG00000174282",
+            "ENSG00000140948",
+            "ENSG00000169554",
+            "ENSG00000101040",
+            "ENSG00000148143",
+            "ENSG00000164185"
+          ]
+        }
+      }
+    },
+    "timestamp": "2026-04-27T01:30:25.004165+00:00",
+    "version": "e114_eg62_p19_cfae47ae"
+  }
+}

@@ -1,0 +1,51 @@
+{
+  "tissues_used": [
+    "Brain - Spinal cord (cervical c-1)",
+    "Brain - Hypothalamus",
+    "Nerve - Tibial",
+    "Artery - Tibial",
+    "Artery - Aorta",
+    "Artery - Coronary",
+    "Whole Blood"
+  ],
+  "tissues_missing": [],
+  "n_migraine_with_expr": 117,
+  "n_cgrp_with_expr": 5,
+  "median_log2tpm_per_tissue": {
+    "Brain - Spinal cord (cervical c-1)": {
+      "migraine_set_median": 2.4270831680811322,
+      "cgrp_set_median": 2.5934207047401636,
+      "all_genes_median": 0.01974617300405966
+    },
+    "Brain - Hypothalamus": {
+      "migraine_set_median": 2.235475868134212,
+      "cgrp_set_median": 1.8288021605439648,
+      "all_genes_median": 0.044102053339821895
+    },
+    "Nerve - Tibial": {
+      "migraine_set_median": 3.69885188012501,
+      "cgrp_set_median": 3.998682939775031,
+      "all_genes_median": 0.09621623672188895
+    },
+    "Artery - Tibial": {
+      "migraine_set_median": 3.782838373692157,
+      "cgrp_set_median": 4.575772176953702,
+      "all_genes_median": 0.0
+    },
+    "Artery - Aorta": {
+      "migraine_set_median": 3.444229739944335,
+      "cgrp_set_median": 3.3974812624927653,
+      "all_genes_median": 0.0
+    },
+    "Artery - Coronary": {
+      "migraine_set_median": 3.5070588366603404,
+      "cgrp_set_median": 4.625241261059152,
+      "all_genes_median": 0.024657048169471264
+    },
+    "Whole Blood": {
+      "migraine_set_median": 0.7871800125912011,
+      "cgrp_set_median": 0.3468536638688797,
+      "all_genes_median": 0.0
+    }
+  }
+}

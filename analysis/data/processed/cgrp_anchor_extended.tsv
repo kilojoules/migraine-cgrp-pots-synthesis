@@ -1,0 +1,6 @@
+gene	note
+CALCA	CALCA/CALCB ligands + CALCRL+RAMP1 receptor + CRCP coreceptor
+CALCB	CALCA/CALCB ligands + CALCRL+RAMP1 receptor + CRCP coreceptor
+CALCRL	CALCA/CALCB ligands + CALCRL+RAMP1 receptor + CRCP coreceptor
+RAMP1	CALCA/CALCB ligands + CALCRL+RAMP1 receptor + CRCP coreceptor
+CRCP	CALCA/CALCB ligands + CALCRL+RAMP1 receptor + CRCP coreceptor

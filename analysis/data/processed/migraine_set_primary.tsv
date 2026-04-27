@@ -1,0 +1,124 @@
+gene	locus_number	lead_snp	chromosome	raw_locus_id	method
+PRDM16	1	rs10218452	1	PRDM16	lead_snp_nearest
+CAMTA1	2	rs10128028	1	CAMTA1	lead_snp_nearest
+TMEM51	3	rs12057629	1	TMEM51	lead_snp_nearest
+INPP5B	4	rs28739509	1	INPP5B	lead_snp_nearest
+MACF1	5	rs1472662	1	MACF1	lead_snp_nearest
+C1orf87	6	rs11578492	1	C1orf87	lead_snp_nearest
+LEPR	7	rs7511672	1	near LEPR	lead_snp_nearest
+RP4-598G3.1	8	rs56019088	1	near RP4-598G3.1	lead_snp_nearest
+TGFBR3	9	rs11165300	1	TGFBR3	lead_snp_nearest
+TSPAN2	10	rs2078371	1	near TSPAN2	lead_snp_nearest
+ADAMTSL4	11	rs6693567	1	near ADAMTSL4	lead_snp_nearest
+MEF2D	12	rs2274319	1	MEF2D	lead_snp_nearest
+RABGAP1L	13	rs11487328	1	RABGAP1L	lead_snp_nearest
+PLA2G4A	14	rs6668908	1	PLA2G4A	lead_snp_nearest
+MAPKAPK2	15	rs56140113	1	near MAPKAPK2	lead_snp_nearest
+KIF26B	16	rs72764846	1	KIF26B	lead_snp_nearest
+THADA	17	rs12712881	2	THADA	lead_snp_nearest
+ANKRD36C	18	rs4907224	2	ANKRD36C	lead_snp_nearest
+ZEB2	19	rs7564469	2	ZEB2	lead_snp_nearest
+AC064865.1	20	rs895219	2	near AC064865.1	lead_snp_nearest
+RNU6-546P	21	rs843215	2	near RNU6-546P	lead_snp_nearest
+MYO3B	22	rs4668251	2	MYO3B	lead_snp_nearest
+HOXD10	23	rs72923449	2	near HOXD10	lead_snp_nearest
+CARF	24	rs138556413	2	CARF	lead_snp_nearest
+TRPM8	25	rs10166942	2	near TRPM8	lead_snp_nearest
+TGFBR2	26	rs7371912	3	near TGFBR2	lead_snp_nearest
+ATRIP	27	rs7618883	3	ATRIP	lead_snp_nearest
+HNRNPA3P8	28	rs950570	3	near HNRNPA3P8	lead_snp_nearest
+CADM2	29	rs73138150	3	near CADM2	lead_snp_nearest
+C3orf38	30	rs6795209	3	near C3orf38	lead_snp_nearest
+ITGB5	31	rs1499963	3	ITGB5	lead_snp_nearest
+GPR149	32	rs13078967	3	near GPR149	lead_snp_nearest
+SEC63P2	33	rs73805934	4	near SEC63P2	lead_snp_nearest
+SPINK2	34	rs7684253	4	near SPINK2	lead_snp_nearest
+ANKDD1B	35	rs42854	5	ANKDD1B	lead_snp_nearest
+SSBP2	36	rs12653216	5	near SSBP2	lead_snp_nearest
+ZNF474	37	rs11957829	5	near ZNF474	lead_snp_nearest
+SNX24	38	rs246326	5	SNX24	lead_snp_nearest
+POU4F3	39	rs10038882	5	near POU4F3	lead_snp_nearest
+TIGD6|HMGXB3	40	rs4705403	5	TIGD6|HMGXB3	lead_snp_nearest
+NKX2-5	41	rs6556059	5	near NKX2-5	lead_snp_nearest
+NSD1	42	rs10866704	5	NSD1	lead_snp_nearest
+PHACTR1	43	rs9349379	6	PHACTR1	lead_snp_nearest
+PRL	44	rs9295536	6	near PRL	lead_snp_nearest
+IER3	45	rs9468830	6	near IER3	lead_snp_nearest
+EHMT2	46	rs74434374	6	EHMT2	lead_snp_nearest
+KCNK5	47	rs10456100	6	KCNK5	lead_snp_nearest
+KRT19P1	48	rs34273564	6	near KRT19P1	lead_snp_nearest
+FHL5	49	rs11153082	6	FHL5	lead_snp_nearest
+REV3L	50	rs6568677	6	REV3L	lead_snp_nearest
+GJA1	51	rs28455731	6	near GJA1	lead_snp_nearest
+PCMT1	52	rs9383843	6	near PCMT1	lead_snp_nearest
+SUGCT	53	rs10234636	7	SUGCT	lead_snp_nearest
+MLXIPL	54	rs13235543	7	MLXIPL	lead_snp_nearest
+TSPAN12	55	rs56067931	7	TSPAN12	lead_snp_nearest
+PTK2B	56	rs11782789	8	PTK2B	lead_snp_nearest
+RP11-573J24.1	57	rs4739105	8	near RP11-573J24.1	lead_snp_nearest
+NFIB	58	rs580845	9	NFIB	lead_snp_nearest
+RP11-373A6.1	59	rs10156578	9	near RP11-373A6.1	lead_snp_nearest
+TJP2	60	rs7034179	9	TJP2	lead_snp_nearest
+ZNF462	61	rs17723637	9	ZNF462	lead_snp_nearest
+ASTN2	62	rs3891689	9	ASTN2	lead_snp_nearest
+EHMT1	63	rs4278223	9	near EHMT1	lead_snp_nearest
+RNA5SP299	64	rs7916911	10	near RNA5SP299	lead_snp_nearest
+MLLT10	65	rs10828247	10	near MLLT10	lead_snp_nearest
+PLCE1	66	rs2274224	10	PLCE1	lead_snp_nearest
+HPSE2	67	rs12260159	10	HPSE2	lead_snp_nearest
+CNNM2	68	rs12260436	10	CNNM2	lead_snp_nearest
+RBM20	69	rs869432	10	RBM20	lead_snp_nearest
+HTRA1	70	rs2672592	10	HTRA1	lead_snp_nearest
+GPR26	71	rs11248546	10	near GPR26	lead_snp_nearest
+INPP5A	72	rs200314499	10	INPP5A	lead_snp_nearest
+MRGPRE	73	rs12295710	11	MRGPRE	lead_snp_nearest
+MRVI1	74	rs4910165	11	MRVI1	lead_snp_nearest
+INSC	75	rs1003194	11	near INSC	lead_snp_nearest
+MPPED2	76	rs11031122	11	MPPED2	lead_snp_nearest
+AMBRA1	77	rs7932866	11	AMBRA1	lead_snp_nearest
+RAB3IL1	78	rs12787928	11	near RAB3IL1	lead_snp_nearest
+RBM14-RBM4|RBM4	79	rs566673	11	RBM14-RBM4|RBM4	lead_snp_nearest
+YAP1	80	rs12226331	11	YAP1	lead_snp_nearest
+SPATA19	81	rs10894756	11	near SPATA19	lead_snp_nearest
+FGF6	82	rs2160875	12	near FGF6	lead_snp_nearest
+PDZRN4	83	rs1458170	12	PDZRN4	lead_snp_nearest
+LRP1	84	rs11172113	12	LRP1	lead_snp_nearest
+ATP2B1	85	rs4842676	12	ATP2B1	lead_snp_nearest
+RP11-690J15.1	86	rs10777902	12	near RP11-690J15.1	lead_snp_nearest
+NCOR2	87	rs1271309	12	NCOR2	lead_snp_nearest
+LRCH1	88	rs7335684	13	LRCH1	lead_snp_nearest
+RNF219-AS1	89	rs7996252	13	RNF219-AS1	lead_snp_nearest
+COL4A1	90	rs2000660	13	near COL4A1	lead_snp_nearest
+RP11-384J4.2	91	rs1245463	14	near RP11-384J4.2	lead_snp_nearest
+LRFN5	92	rs1542668	14	near LRFN5	lead_snp_nearest
+ARID4A	93	rs28756401	14	near ARID4A	lead_snp_nearest
+DLST	94	rs55707505	14	DLST	lead_snp_nearest
+IFT43	95	rs75002882	14	IFT43	lead_snp_nearest
+ITPK1	96	rs11624776	14	near ITPK1	lead_snp_nearest
+SERPINA1	97	rs28929474	14	SERPINA1	lead_snp_nearest
+ABHD17C	98	rs12708529	15	ABHD17C	lead_snp_nearest
+HMOX2	99	rs12598836	16	HMOX2	lead_snp_nearest
+CFDP1	100	rs8046696	16	CFDP1	lead_snp_nearest
+ZCCHC14	101	rs8052831	16	near ZCCHC14	lead_snp_nearest
+SMG6	102	rs9894634	17	SMG6	lead_snp_nearest
+ZBTB4	103	rs34914463	17	ZBTB4	lead_snp_nearest
+HOXB3	104	rs11652860	17	HOXB3	lead_snp_nearest
+RP11-81K2.1	105	rs2119930	17	RP11-81K2.1	lead_snp_nearest
+MRC2	106	rs12452590	17	MRC2	lead_snp_nearest
+TBC1D16	107	rs1285294	17	TBC1D16	lead_snp_nearest
+RNF213	108	rs8077768	17	RNF213	lead_snp_nearest
+RBBP8	109	rs7506921	18	near RBBP8	lead_snp_nearest
+SKOR2	110	rs1019990	18	near SKOR2	lead_snp_nearest
+FECH	111	rs8087942	18	near FECH	lead_snp_nearest
+CACNA1A	112	rs10405121	19	CACNA1A	lead_snp_nearest
+SUGP1	113	rs74182632	19	SUGP1	lead_snp_nearest
+B9D2|TMEM91	114	rs1982072	19	B9D2|TMEM91	lead_snp_nearest
+JAG1	115	rs111404218	20	near JAG1	lead_snp_nearest
+SLC24A3	116	rs4814864	20	SLC24A3	lead_snp_nearest
+C20orf112	117	rs6057599	20	C20orf112	lead_snp_nearest
+ZMYND8	118	rs910187	20	ZMYND8	lead_snp_nearest
+MRPS6	119	rs28451064	21	near MRPS6	lead_snp_nearest
+RUNX1	120	rs764508	21	RUNX1	lead_snp_nearest
+AC006547.14	121	rs625686	22	near AC006547.14	lead_snp_nearest
+FAM47A	122	rs1507220	X	near FAM47A	lead_snp_nearest
+MED14	123	rs4403550	X	near MED14	lead_snp_nearest
