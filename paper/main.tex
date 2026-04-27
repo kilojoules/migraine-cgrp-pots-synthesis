@@ -1,0 +1,163 @@
+\documentclass[11pt]{article}
+
+\usepackage[margin=1in]{geometry}
+\usepackage[english]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{microtype}
+\usepackage{amsmath, amssymb}
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{hyperref}
+\usepackage[backend=biber, style=numeric, sorting=none]{biblatex}
+\addbibresource{refs.bib}
+
+\hypersetup{
+  colorlinks=true,
+  linkcolor=black,
+  citecolor=black,
+  urlcolor=blue
+}
+
+\title{Triangulating Migraine Genetics, Autonomic Dysregulation, and CGRP Signaling: A Computational Synthesis Motivated by POTS--Migraine Comorbidity}
+\author{Julian Quick}
+\date{\today}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+Migraine and Postural Orthostatic Tachycardia Syndrome (POTS) co-occur clinically at rates well above population baselines, yet a shared mechanistic explanation remains unsettled. Migraine genetics is mature: large genome-wide association studies have identified more than one hundred risk loci, and Calcitonin Gene-Related Peptide (CGRP)--targeting therapies are clinically effective. POTS genetics, by contrast, is essentially absent due to data scarcity, forcing any computational investigation of the comorbidity to triangulate rather than cross-reference. This paper proposes and motivates such a triangulation. We frame the question, review what is known about each of the three angles---migraine genetics, autonomic and adrenergic biology, and CGRP signaling---and describe the analyses (set overlap with permutation nulls, pathway enrichment, and protein--protein interaction network proximity) that the available data can support. Our ceiling claim is consistency, not causation: whether migraine genetic risk sits closer to autonomic and CGRP biology than chance would predict, and what that implies for the POTS--migraine--CGRP axis. \emph{This document is the framing and literature-review phase. Empirical analyses are reserved for a follow-up phase, gated on the gap analysis presented in Section~\ref{sec:related}.}
+\end{abstract}
+
+\section{Introduction}
+\label{sec:intro}
+
+\paragraph{Clinical motivation.} Migraine is a common, disabling neurological disorder with a lifetime prevalence near 15\% and substantial sex bias toward women. A meaningful subpopulation of migraine patients also meets criteria for Postural Orthostatic Tachycardia Syndrome (POTS) or related autonomic disorders, and the clinical overlap is well recognized in dysautonomia and headache clinics. The mechanistic relationship, however, is not settled: migraine attacks and POTS episodes share triggers (postural change, sleep loss, dehydration, hormonal shifts), share symptom domains (headache, brain fog, sensory sensitivity), and plausibly share signaling substrates (sympathetic activation, vascular instability, sensory nerve sensitization), but the literature has not unified them under a single computational framework.
+
+\paragraph{Mechanistic anchor: CGRP.} The dominant validated migraine target at the molecular level is Calcitonin Gene-Related Peptide (CGRP). Anti-CGRP monoclonal antibodies and small-molecule receptor antagonists (gepants) are FDA-approved migraine therapies, providing strong perturbational evidence that CGRP signaling participates causally in migraine attacks. CGRP is not a migraine-specific molecule: it is a sensory-nerve neuropeptide with roles in vascular regulation, neurogenic inflammation, and protective stress responses. These roles are autonomic-adjacent.
+
+\paragraph{The data asymmetry.} Migraine GWAS is mature, with the largest meta-analyses involving hundreds of thousands of cases. POTS GWAS is essentially absent: the disorder is under-coded in biobanks, often misdiagnosed, and lacks a large genetic cohort. This asymmetry rules out a direct migraine-vs-POTS genetic cross-reference and forces a triangulation strategy: use migraine genetics as the signal-rich anchor, build mechanism-driven gene sets that proxy POTS-relevant biology (autonomic, adrenergic, sympathetic), and ask whether migraine genetic risk converges on those proxies and on CGRP signaling more than chance would predict.
+
+\paragraph{The question this paper addresses.} \emph{Does migraine genetic risk, when intersected with curated autonomic and CGRP gene sets and analyzed through protein--protein interaction network proximity, sit closer to autonomic biology than degree-matched random gene sets, and what does that imply for the POTS--migraine--CGRP axis?}
+
+\paragraph{Honest scoping.} This work is a computational synthesis and secondary analysis. It does not generate new wet-lab data, does not establish causation, and cannot resolve POTS genetics in the absence of POTS cohorts. Its ceiling claim is \emph{consistency with} an autonomic dysregulation hypothesis. A clean negative result---migraine genetics does not preferentially overlap autonomic biology more than matched neurological conditions---would itself be informative.
+
+\paragraph{Contributions of this phase.}
+\begin{itemize}
+  \item Frame the POTS--migraine--CGRP triangulation as a tractable computational object given the current data asymmetry.
+  \item Provide a comprehensive literature review across migraine genetics, CGRP biology, autonomic and POTS biology, and computational pathway/network methods.
+  \item Conduct a gap analysis to determine whether the proposed analyses are novel, partially novel, or redundant with published work.
+  \item Specify the analysis plan, success criteria, and null-model design that the next phase will execute.
+\end{itemize}
+
+\section{Background}
+\label{sec:background}
+
+\subsection{Migraine genetics}
+\label{sec:bg-migraine}
+
+Migraine common-variant genetics is mature. Successive meta-analyses traced an arc from twelve loci across roughly twenty-three thousand cases~\cite{anttila_2013_migraine_gwas}, to thirty-eight loci across sixty thousand~\cite{gormley_2016_migraine_gwas}, to one hundred and twenty-three loci in the Hautakangas et al.\ 2022 meta-analysis of 102{,}084 cases and 771{,}257 controls~\cite{hautakangas_2022_migraine_gwas}, with multiethnic confirmation across European, East Asian, African American, and Hispanic/Latino cohorts identifying a further set of sex-specific loci~\cite{choquet_2021_multiethnic}. A 2025 fine-mapping reanalysis of approximately ninety-eight thousand cases yielded one hundred and eighty-one credible variant sets, with seven variants reaching posterior inclusion probability greater than 0.9~\cite{hautakangas_2025_migraine_finemapping}. Trans-ancestry coverage is expanding, though smaller non-European cohorts remain underpowered relative to the European mega-analyses~\cite{liu_2024_han_chinese_migraine_gwas}.
+
+Twin-study heritability estimates concentrate at $\approx$0.36--0.48 across more than fifty studies~\cite{olofsson_2024_migraine_twin_review}, indicating that a substantial fraction of liability is genetic but that common-variant GWAS still leaves heritability unaccounted for, motivating pathway-level integration. The rare-variant frontier is now opening: a deCODE-led analysis across $\approx$1.3 million individuals identified large-effect rare variants in \textit{PRRT2} (migraine with aura, OR $\approx$ 5.4), \textit{SCN11A} (protective), and a cis-regulatory variant in \textit{KCNK5}~\cite{bjornsdottir_2023_rare_migraine_variants}, while UK Biobank exome-wide analyses extend the monogenic familial hemiplegic migraine genes (\textit{CACNA1A}, \textit{ATP1A2}, \textit{SCN1A}; reviewed in~\cite{alfayyadh_2024_hemiplegic_migraine_review}) into population-level sub-Mendelian risk~\cite{staehr_2025_fhm_ukb_exome}. A 2024 narrative review frames the integrated picture as convergence on excitatory--inhibitory imbalance and neurovascular pathways~\cite{sutherland_2024_migraine_genetics_review}.
+
+Two facts from this literature are load-bearing for our triangulation. First, Hautakangas et al.\ identified a chromosome 11 locus containing \textit{CALCA}/\textit{CALCB} (the genes encoding the CGRP and adrenomedullin ligands) as genome-wide significant, but the paper explicitly notes that ``none of the genes encoding CGRP receptor proteins (\textit{CALCRL}, \textit{RAMP1} or \textit{RCP}) show a statistically comparable association (all $P > 10^{-4}$)''~\cite{hautakangas_2022_migraine_gwas}. The 2025 fine-mapping does not nominate the receptor-complex genes as causal either~\cite{hautakangas_2025_migraine_finemapping}, and a transcriptome-wide association study integrating eQTLs across forty-nine GTEx tissues~\cite{ghaffar_2023_migraine_eqtl_twas} also fails to surface them. The ligand--receptor asymmetry is therefore not an artifact of statistical thresholding in any single study; it is reproducible. Second, no major migraine GWAS to date has run pathway enrichment specifically on autonomic, sympathetic, parasympathetic, or adrenergic gene sets. Hautakangas et al.\ used MAGMA against MSigDB-curated and GO collections; Gormley et al.\ reported broad vascular and smooth-muscle tissue enrichment; Choquet et al.\ surfaced flavonoid glucuronide and ascorbate--aldarate metabolism via FUMA; the 2024 Sutherland review does not catalogue any autonomic-specific analysis. The autonomic dimension is therefore an open question, and the focus of this synthesis.
+
+\subsection{CGRP biology and migraine pharmacology}
+\label{sec:bg-cgrp}
+
+The molecular case for CGRP signaling in migraine rests on three converging lines of evidence: a defined biosynthetic and receptor architecture, perturbational evidence that exogenous CGRP provokes migraine-like attacks, and pharmacological evidence that blocking CGRP signaling at either ligand or receptor prevents and aborts them.
+
+\paragraph{Architecture.} CGRP arises from \textit{CALCA} via tissue-specific alternative RNA processing: a calcitonin-encoding mRNA predominates in thyroid C cells, while a CGRP-encoding mRNA predominates in neurons~\cite{amara_1982_calca}. The active receptor is a heterodimer of the calcitonin-receptor-like receptor (CLR / \textit{CALCRL}) and receptor-activity-modifying protein 1 (RAMP1), with receptor component protein (RCP / \textit{CRCP}) supporting Gs coupling. The 3.3-\AA\ cryo-EM structure of the active human CGRP receptor in complex with peptide and Gs heterotrimer~\cite{liang_2018_cgrpr_cryoem} shows that RAMP1 sits at the CLR transmembrane TM3/4/5 interface and stabilizes ECL2, contacting CGRP only minimally, consistent with allosteric modulation of CLR rather than direct ligand binding.
+
+\paragraph{Perturbational evidence.} Intravenous infusion of human $\alpha$-CGRP at 2~\textmu g/min for twenty minutes provoked headache in all twelve migraineurs without aura tested in a double-blind crossover, versus one in twelve under placebo, with three patients meeting full IHS migraine-without-aura criteria~\cite{lassen_2002_cgrp_provocation}. This established that exogenous CGRP is sufficient to provoke migraine-like attacks in susceptible individuals.
+
+\paragraph{Pharmacological evidence.} Four monoclonal antibodies targeting either the CGRP ligand (fremanezumab~\cite{silberstein_2017_halo_fremanezumab}, galcanezumab~\cite{stauffer_2018_evolve1_galcanezumab}, eptinezumab~\cite{lipton_2020_promise2_eptinezumab}) or the CGRP receptor (erenumab~\cite{goadsby_2017_strive_erenumab}) have demonstrated approximately 3.5--4.7 monthly migraine-day reductions in episodic migraine and 4.3--4.6 in chronic migraine across pivotal phase 3 trials, with $\geq$50\% responder rates near 40--60\% versus 18--27\% on placebo. Three orally administered small-molecule receptor antagonists (gepants) reproduce this signal: rimegepant and ubrogepant for acute treatment, with two-hour pain freedom roughly twice placebo~\cite{croop_2019_rimegepant,dodick_2019_achieve1_ubrogepant}, and atogepant for daily prevention with monthly migraine-day reductions of 3.7--4.2 versus 2.5 on placebo~\cite{ailani_2021_advance_atogepant}. A modern review consolidates these findings into the trigeminovascular framework and locates the primary site of action at the trigeminal ganglion, peripheral and outside the blood--brain barrier~\cite{edvinsson_2018_cgrp_review}.
+
+\paragraph{CGRP outside migraine, and the autonomic relevance.} CGRP is not solely a pain neuropeptide. A comprehensive physiological review documents CGRP as among the most potent endogenous vasodilators known, a mediator of neurogenic inflammation alongside substance P, and a tonic counter-regulator of the renin--angiotensin--aldosterone and sympathetic systems in cardiovascular regulation~\cite{russell_2014_cgrp_physiology}. Sensory afferents---including perivascular trigeminal afferents---are the primary source of circulating CGRP under physiological conditions. Postmarketing pharmacovigilance corroborates the autonomic relevance: a 2021 case series identified sixty-one reports of substantial blood-pressure elevation on erenumab, with median systolic increase of 39~mmHg, leading to a 2020 US label update adding hypertension to Warnings and Precautions~\cite{saely_2021_erenumab_hypertension}. If pharmacological blockade of CGRP receptor signaling raises blood pressure, then endogenous CGRP performs autonomic work at baseline, not only nociceptive work during attacks. This is the molecular substrate that connects migraine pharmacology to the autonomic phenotypes addressed in the next subsection.
+
+\subsection{Autonomic dysfunction and POTS}
+\label{sec:bg-pots}
+
+\paragraph{Definition and subtypes.} The 2015 Heart Rhythm Society consensus statement defines POTS as a sustained heart-rate increase of at least 30~bpm (40~bpm in adolescents) within ten minutes of standing, in the absence of orthostatic hypotension, accompanied by chronic symptoms of orthostatic intolerance for at least three months~\cite{sheldon_2015_hrs}. Three operational subtypes are distinguished---neuropathic (patchy peripheral sympathetic denervation, especially lower limb), hyperadrenergic (upright plasma norepinephrine $>$600~pg/mL with rising blood pressure), and hypovolemic (reduced red-cell mass and plasma volume)---though the subtypes overlap in most patients~\cite{raj_2013_pots}. The 2021 NIH Expert Consensus reaffirms POTS as a heterogeneous syndrome with overlapping mechanisms and no single unified pathophysiology, documents the strong female predominance (approximately 80--94\%), and identifies migraine, Ehlers--Danlos syndrome, mast-cell activation syndrome, and ME/CFS as the principal comorbidities~\cite{vernino_2021_nih}.
+
+\paragraph{POTS--migraine comorbidity.} The clinical overlap is robust but quantitatively unstable. A 2022 systematic review and meta-analysis found a pooled prevalence of migraine in POTS of 36.8\%, with a 95\% confidence interval of 2.9--70.7\% across twenty-three studies and substantial between-study heterogeneity~\cite{ray_2022_metaanalysis}. Larger clinic-based cohorts report higher rates: in a 2023 hEDS cohort, migraine prevalence was 67\% and POTS prevalence was 61\%, with a mean of 10.45 co-diagnoses per individual~\cite{halverson_2023_heds}, and an earlier controlled study found 75\% migraine prevalence in women with joint hypermobility syndrome versus 43\% in controls~\cite{bendik_2011_hypermobility}. The strongest existing narrative review of POTS--migraine comorbidity identifies the most plausible mechanistic overlaps as sympathetic-nervous-system dysregulation, central and peripheral hemodynamic alterations, and central sensitization---but conspicuously does not center CGRP as a bridging mechanism~\cite{mueller_2022_potsmigraine}. Independently of comorbid POTS, migraineurs themselves show measurable cardiac autonomic dysregulation: reduced heart-rate variability, lower SDNN and triangular index, with parasympathetic dysfunction predominating during the ictal phase and sympathetic abnormalities also present~\cite{zhang_2021_hrv}. An autonomic-migraine axis is therefore intrinsic to the migraine phenotype, not solely a feature of the POTS-comorbid subgroup.
+
+\paragraph{POTS genetics.} POTS genetics was, until very recently, essentially absent. The signature monogenic example is heterozygous loss of function in the norepinephrine transporter (\textit{SLC6A2}, A457P, $>$98\% LoF) in a family with familial orthostatic intolerance, establishing impaired norepinephrine clearance as a molecular driver of hyperadrenergic orthostatic intolerance~\cite{shannon_2000_net}. Beyond this, only a single replicated candidate-gene signal exists: the \textit{GNB3} C825T polymorphism is overrepresented (TT genotype 45.8\% vs 20.0\%, $p=0.036$) in pediatric POTS~\cite{nakao_2012_gnb3}. The first systematic genomic interrogation of POTS appeared in 2025: a combined GWAS and whole-exome sequencing study in 207 European cases and 4{,}063 controls, with WES on 87 cases~\cite{qu_2025_pots_genetics}. No common variants reached genome-wide significance, but the authors performed an over-representation analysis on the 5{,}670 SNPs reaching nominal significance ($P < 0.05$), and rare-variant burden analysis separately identified fifty-five genome-wide-significant genes harboring ninety-two pathogenic or likely-pathogenic variants. The GWAS over-representation analysis recovered---among other gene sets---HALLMARK\_ESTROGEN\_RESPONSE\_EARLY ($P = 3.78 \times 10^{-4}$, FDR $= 0.019$); the authors note that estrogen-response genes ``could potentially play a role in POTS, given the higher prevalence of the condition in women.''
+
+\paragraph{The estrogen bridge.} Estrogen is the most plausible endocrine substrate connecting the female sex bias of POTS, the female sex bias of migraine, and the CGRP system. A 2021 review establishes that estrogen withdrawal disinhibits trigeminovascular CGRP expression and release, and synthesizes the mechanistic axis by which ovarian steroids modulate CGRP-driven migraine pathophysiology~\cite{krause_2021_estrogen}. Combined with the rare-variant ``early estrogen response'' enrichment in POTS~\cite{qu_2025_pots_genetics}, the estrogen$\rightarrow$CGRP axis becomes the natural mechanistic bridge that the POTS--migraine literature has otherwise left unarticulated.
+
+\subsection{Computational methods for cross-disease genetic synthesis}
+\label{sec:bg-methods}
+
+The proposed analyses draw on three method families: gene-level aggregation of GWAS summary statistics, pathway and tissue enrichment, and protein--protein interaction network proximity.
+
+\paragraph{Gene-level aggregation.} MAGMA aggregates SNP-level $p$-values into gene-level statistics using a multiple-regression model that accounts for linkage disequilibrium, and supports competitive gene-set tests with covariate adjustment~\cite{deleeuw_2015_magma}. The FUMA platform wraps MAGMA together with positional, eQTL, and chromatin-interaction SNP-to-gene mapping, GTEx tissue enrichment, and MSigDB-based pathway tests in a versioned and reproducible pipeline~\cite{watanabe_2017_fuma}. GTEx v8 provides the eQTL substrate inside FUMA's SNP-to-gene mapping and supplies the tissue-enrichment statistics; coverage is 15{,}201 RNA-seq samples across 49 tissues in 838 donors~\cite{gtex_2020_atlas}.
+
+\paragraph{Pathway enrichment.} Two complementary engines anchor the field. g:Profiler runs over-representation analysis against GO, KEGG, Reactome, WikiPathways, transcription-factor, miRNA, Human Protein Atlas, and Human Phenotype Ontology sources, with a hierarchical correction (g:SCS) tailored to redundant nested ontology terms~\cite{raudvere_2019_gprofiler}. Enrichr provides a Fisher-style server with combined-score ranking against more than 180 libraries spanning ontologies, pathways, drug perturbations, transcription factors, cell types, disease signatures, ARCHS4, DSigDB, and GTEx~\cite{kuleshov_2016_enrichr}. A long-standing methodological caveat applies to all such tests: competitive gene-sampling tests assume gene--gene independence, which is almost always violated, so subject-sampling (phenotype permutation) or LD-aware regression-based competitive tests are preferred over naive hypergeometric over-representation~\cite{goeman_2007_genesets}.
+
+\paragraph{Network proximity.} Guney et al.\ define and benchmark several network-proximity measures (closest, shortest, kernel, centre, separation) between drug-target sets and disease-gene sets in the human interactome, with a degree-preserving randomization null that converts proximity into a $z$-score; ``closest'' distance with degree-binned random reference sets best discriminates effective from palliative drugs across 238 drugs and 78 diseases~\cite{guney_2016_proximity}. Menche et al.\ introduce the network-separation score $S_{AB}$ between two disease gene sets and derive the conditions under which a disease module is identifiable in an incomplete PPI network: overlapping modules ($S_{AB} < 0$) predict comorbidity, co-expression, and symptom similarity, while well-separated modules are clinically distinct~\cite{menche_2015_diseaseome}. The canonical degree-preserving null is the Maslov--Sneppen edge-rewiring procedure~\cite{maslov_2002_rewiring}, of which the Guney degree-binned random gene-set draw is a computationally cheaper equivalent.
+
+\paragraph{PPI database choice.} Three resources dominate. STRING integrates physical and functional associations with per-edge confidence scores from text mining, experiments, databases, co-expression, and genomic context~\cite{szklarczyk_2023_string}; the inclusion of text-mining edges introduces a literature-bias hazard for any analysis involving heavily studied genes. BioGRID is an open, manually curated repository of physical, genetic, and chemical interactions with PubMed-anchored evidence codes~\cite{oughtred_2021_biogrid}, and IntAct is a PSI-MI-curated repository of binary interactions with detailed experimental annotation~\cite{deltoro_2022_intact}. For a hypothesis test asking whether migraine GWAS hits are closer to the CGRP receptor complex than chance, the literature-bias hazard of STRING is precisely the failure mode to avoid: \textit{CALCA}, \textit{CALCB}, \textit{RAMP1}, and \textit{CALCRL} are among the most heavily literature-studied genes in headache neuroscience, and text-mining edges would artificially shorten the distance between any well-studied gene set and the CGRP module. The methodologically conservative default is therefore the union of BioGRID and IntAct physical-only interactions, with STRING (high-confidence physical subnetwork, text-mining channel disabled) reported as a sensitivity analysis.
+
+\section{Related Work and Gap Analysis}
+\label{sec:related}
+
+Each of the three legs of the proposed triangulation has been touched by published work, but no single computational object combines them, and the specific tests we plan have not been published.
+
+\paragraph{Migraine GWAS pathway enrichment.} Generic enrichment using broad ontology and curated-pathway collections is fully covered by the source GWAS papers themselves. Hautakangas et al.\ used MAGMA against MSigDB-curated and GO collections~\cite{hautakangas_2022_migraine_gwas}; Choquet et al.\ used FUMA and DEPICT, surfacing flavonoid glucuronide biosynthesis and ascorbate--aldarate metabolism~\cite{choquet_2021_multiethnic}; Ghaffar and Nyholt used a transcriptome-wide association study integrating GTEx eQTLs across forty-nine tissues to prioritize vascular and inflammatory tissues~\cite{ghaffar_2023_migraine_eqtl_twas}. None of these analyses tested an autonomic, sympathetic, parasympathetic, or adrenergic-receptor gene set as a focused hypothesis with a permutation null distinct from the generic MSigDB and GO enrichments.
+
+\paragraph{Migraine cardiovascular cross-trait genetics.} A 2020 LDSC analysis between migraine and forty-seven UK Biobank phenotypes plus external GWAS found genetic correlations $r_g = 0.10$ with diastolic blood pressure ($P = 5.4 \times 10^{-5}$) and $r_g = 0.063$ with systolic blood pressure, and additional correlations with heart disease and lipid panels~\cite{siewert_2020_crosstrait}. Notably, that forty-seven-trait panel does \emph{not} include heart-rate variability, orthostatic intolerance, syncope, or any POTS-related phenotype. A genome-wide cross-phenotype meta-analysis of migraine and blood pressure subsequently identified fourteen shared loci; \textit{ADRA2B}, encoding the alpha-2B adrenergic receptor, is the only adrenergic-receptor gene called out among shared loci, but the analysis did not perform a formal autonomic gene-set enrichment, did not run a network-proximity test against the CGRP receptor complex, and did not address POTS comorbidity~\cite{guo_2020_bp_migraine}. We are aware of no published LDSC genetic correlation between migraine and any autonomic or POTS-adjacent phenotype, and the only existing systematic POTS GWAS~\cite{qu_2025_pots_genetics} has not been cross-trait-analyzed with migraine.
+
+\paragraph{Migraine drug-target and PPI work.} A 2024 druggable-genome Mendelian randomization study with colocalization on migraine GWAS surfaced twenty-one druggable migraine-associated genes; PPI was used as a downstream visualization, and \textit{CALCB}, \textit{CALCRL}, \textit{RAMP1}, and \textit{RAMP3} appear only as comparator known drug targets, not as a tested complex~\cite{zhang_2024_druggable}. A 2025 SMR/HEIDI--colocalization--PPI--enrichment pipeline on migraine GWAS prioritized eight genes interacting with known CGRP and 5-HT pathway drug targets and proposed forty-one repurposable drugs, but the construct is target prioritization rather than a permutation-null hypothesis test of proximity to a CGRP-receptor anchor~\cite{liu_2025_precision_target}. A migraine-subtype syncope GWAS tested only three pre-selected candidate variants (\textit{TRPM8}, \textit{GFRA1}, \textit{LRP1}), all non-significant~\cite{lin_2024_syncope_migraine}.
+
+\paragraph{Closest conceptual cousin.} A 2024 arXiv preprint proposes a sympathetic-nervous-system theory of migraine linking sympathetic saturation, baroreceptor hyperexcitability, and downstream CGRP release, citing candidate genes (\textit{TRPM8}, \textit{PRDM16}, \textit{ATP1A2}) from prior literature~\cite{rappoport_2024_sns_migraine}. The framework is verbal and mechanistic; it performs no GWAS overlap, no gene-set enrichment, and no PPI network analysis. We cite it as motivating prior art for the autonomic--CGRP linkage, while noting that the computational test of that linkage has not been performed.
+
+\paragraph{Verdict.} The state of the literature is therefore \emph{partially novel, leaning strongly novel} for the proposed work. (i) No published migraine GWAS pathway-enrichment analysis has tested autonomic or adrenergic gene sets as a focused hypothesis with a permutation null. (ii) No published LDSC has computed genetic correlation between migraine and a POTS-adjacent or HRV phenotype; existing cross-trait analyses stop at blood pressure. (iii) Published migraine PPI / network-pharmacology work has been target-prioritization, not CGRP-anchored proximity hypothesis testing with a degree-preserving null. (iv) The POTS-comorbidity-motivated framing is unaddressed in the published computational literature; the closest cousin is a verbal theory paper. (v) An additional convergence has emerged that no single paper has yet articulated: the GWAS over-representation analysis in the first systematic POTS genomic study recovers the HALLMARK\_ESTROGEN\_RESPONSE\_EARLY gene set among nominally-significant common variants~\cite{qu_2025_pots_genetics}, which by an established mechanism modulates trigeminovascular CGRP signaling~\cite{krause_2021_estrogen}. The estrogen$\rightarrow$CGRP axis is therefore the natural mechanistic bridge that this paper foregrounds.
+
+This verdict gates the analysis plan in Section~\ref{sec:methods}: the proposed combination of focused autonomic gene-set permutation tests, network-proximity hypothesis testing against the CGRP receptor module, and POTS-comorbidity framing constitutes a contribution that the existing literature has not made.
+
+\section{Proposed Methods}
+\label{sec:methods}
+\textit{[Placeholder, written after the gap-analysis verdict.]}
+
+\subsection{Gene set construction}
+\textit{[Curated migraine GWAS gene set (Hautakangas anchor + GWAS Catalog), autonomic/adrenergic gene set (GO + KEGG + manual candidates), CGRP-pathway gene set (CALCA, CALCB, CALCRL, RAMP1, RCP/CRCP and immediate signaling neighbors). Provenance and version-pinning for each.]}
+
+\subsection{Set overlap with matched-background permutation null}
+\textit{[Permutation over gene-length-matched and expression-matched background gene sets. Effect size + 95\% confidence interval, not just $p$-values.]}
+
+\subsection{Pathway enrichment}
+\textit{[g:Profiler / Enrichr cross-check. Ontology source disclosure.]}
+
+\subsection{PPI network proximity}
+\textit{[STRING or BioGRID PPI graph. Shortest-path distance from migraine gene set to CGRP receptor complex; intermediate-node enrichment in autonomic gene set; degree-preserving null.]}
+
+\subsection{Tissue expression}
+\textit{[GTEx expression of migraine genes across autonomic-relevant tissues: brainstem, cervical spinal cord, sympathetic ganglia where available, vascular smooth muscle, trigeminal-proxy tissues.]}
+
+\section{Results}
+\label{sec:results}
+\textit{[Placeholder for Phase 2.]}
+
+\section{Discussion}
+\label{sec:discussion}
+\textit{[Placeholder. Will frame whatever is found explicitly as consistency-with, not evidence-for, the POTS--migraine--CGRP axis.]}
+
+\section{Limitations}
+\label{sec:limitations}
+\begin{itemize}
+  \item No POTS genetic data is available at scale. The autonomic gene set is a mechanism-driven proxy, not a phenotype-derived signature, and any conclusion about POTS specifically is downstream of that proxy choice.
+  \item Migraine GWAS captures common-variant heritability; rare-variant and structural-variant contributions are not represented.
+  \item PPI network analyses inherit biases from interactome curation: well-studied proteins (including CGRP-pathway proteins) accumulate edges disproportionately. Degree-preserving nulls partially address this; they do not eliminate it.
+  \item Pathway enrichment is sensitive to gene-set definition, background gene set, and ontology version. We pin versions but readers should interpret enrichment $p$-values as exploratory.
+  \item Causation cannot be inferred from any of the planned analyses. The synthesis frames hypotheses for downstream testing in cohorts where both phenotypes are measured.
+\end{itemize}
+
+\section*{Reproducibility}
+All code, gene sets with provenance, and figure-generation notebooks will be released as a public repository alongside the next phase of this work. The literature review notes (\texttt{lit\_review.md}) and version-pinned gene-set files are tracked in the same repository.
+
+\printbibliography
+
+\end{document}
