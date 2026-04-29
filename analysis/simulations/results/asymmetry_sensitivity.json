@@ -1,0 +1,321 @@
+{
+  "n_replicates_per_cell": 2000,
+  "M1_sweep": [
+    {
+      "param_mean_s_recep": 0.001,
+      "summary": {
+        "model": "M1_purifying_recep_s=1e-03",
+        "n_replicates": 2000,
+        "elapsed_s": 3.328620195388794,
+        "per_gene_max_abs_Z_mean": {
+          "CALCA": 4.41320245894977,
+          "CALCB": 4.426215691767558,
+          "CALCRL": 23.76476944812593,
+          "RAMP1": 9.336746472594042,
+          "CRCP": 9.594147078324427
+        },
+        "per_gene_max_abs_Z_median": {
+          "CALCA": 0.6857758994064703,
+          "CALCB": 0.6379120735267232,
+          "CALCRL": 19.439876515168223,
+          "RAMP1": 0.893616220027833,
+          "CRCP": 0.9861045250692377
+        },
+        "per_gene_max_abs_Z_q95": {
+          "CALCA": 22.007660889755233,
+          "CALCB": 21.884321348359048,
+          "CALCRL": 64.27200013822633,
+          "RAMP1": 46.18614903726942,
+          "CRCP": 44.59914811734785
+        },
+        "per_gene_GWS_rate": {
+          "CALCA": 0.242,
+          "CALCB": 0.2455,
+          "CALCRL": 0.792,
+          "RAMP1": 0.356,
+          "CRCP": 0.36
+        },
+        "ligand_GWS_rate": 0.4335,
+        "receptor_invisible_rate": 0.066,
+        "hit_pattern_rate": 0.029,
+        "asymmetry_mean": -23.31653878310649,
+        "asymmetry_median": -21.26980634006771,
+        "asymmetry_q05_q95": [
+          -63.5339106529707,
+          10.739727580938261
+        ]
+      }
+    },
+    {
+      "param_mean_s_recep": 0.005,
+      "summary": {
+        "model": "M1_purifying_recep_s=5e-03",
+        "n_replicates": 2000,
+        "elapsed_s": 2.2742629051208496,
+        "per_gene_max_abs_Z_mean": {
+          "CALCA": 4.9910298790649446,
+          "CALCB": 4.6416224170925435,
+          "CALCRL": 13.304230491380144,
+          "RAMP1": 4.754738652159586,
+          "CRCP": 4.897040056601226
+        },
+        "per_gene_max_abs_Z_median": {
+          "CALCA": 0.7284434497492347,
+          "CALCB": 0.6611889256563857,
+          "CALCRL": 4.240197282723322,
+          "RAMP1": 0.0,
+          "CRCP": 0.0
+        },
+        "per_gene_max_abs_Z_q95": {
+          "CALCA": 24.039957444641654,
+          "CALCB": 22.169890896336046,
+          "CALCRL": 54.29079018209042,
+          "RAMP1": 31.276632646080426,
+          "CRCP": 32.46928348732551
+        },
+        "per_gene_GWS_rate": {
+          "CALCA": 0.271,
+          "CALCB": 0.248,
+          "CALCRL": 0.473,
+          "RAMP1": 0.1875,
+          "CRCP": 0.179
+        },
+        "ligand_GWS_rate": 0.46,
+        "receptor_invisible_rate": 0.3335,
+        "hit_pattern_rate": 0.16,
+        "asymmetry_mean": -10.846393781808118,
+        "asymmetry_median": -5.153970215277564,
+        "asymmetry_q05_q95": [
+          -54.692491476335164,
+          21.228069467502994
+        ]
+      }
+    },
+    {
+      "param_mean_s_recep": 0.01,
+      "summary": {
+        "model": "M1_purifying_recep_s=1e-02",
+        "n_replicates": 2000,
+        "elapsed_s": 2.1259071826934814,
+        "per_gene_max_abs_Z_mean": {
+          "CALCA": 4.373943420835852,
+          "CALCB": 4.402405571168286,
+          "CALCRL": 11.20784471475984,
+          "RAMP1": 3.905212955578213,
+          "CRCP": 4.24213825287018
+        },
+        "per_gene_max_abs_Z_median": {
+          "CALCA": 0.7121175395687735,
+          "CALCB": 0.6396676033528037,
+          "CALCRL": 1.4750175490051527,
+          "RAMP1": 0.0,
+          "CRCP": 0.0
+        },
+        "per_gene_max_abs_Z_q95": {
+          "CALCA": 21.886065171852263,
+          "CALCB": 22.02236684352729,
+          "CALCRL": 48.171395069990346,
+          "RAMP1": 29.36119719520787,
+          "CRCP": 30.36989458191159
+        },
+        "per_gene_GWS_rate": {
+          "CALCA": 0.238,
+          "CALCB": 0.2395,
+          "CALCRL": 0.4,
+          "RAMP1": 0.144,
+          "CRCP": 0.154
+        },
+        "ligand_GWS_rate": 0.424,
+        "receptor_invisible_rate": 0.406,
+        "hit_pattern_rate": 0.1805,
+        "asymmetry_mean": -8.958040719857882,
+        "asymmetry_median": -2.7332786121187675,
+        "asymmetry_q05_q95": [
+          -50.91694895761926,
+          22.033751510200283
+        ]
+      }
+    }
+  ],
+  "M2_sweep": [
+    {
+      "param_sigma_beta_recep": 0.02,
+      "summary": {
+        "model": "M2_allelic_sigma_recep=0.02",
+        "n_replicates": 2000,
+        "elapsed_s": 2.99873423576355,
+        "per_gene_max_abs_Z_mean": {
+          "CALCA": 25.98110906775899,
+          "CALCB": 26.712620720386976,
+          "CALCRL": 5.939691533201411,
+          "RAMP1": 2.823999240450911,
+          "CRCP": 2.7400087863903124
+        },
+        "per_gene_max_abs_Z_median": {
+          "CALCA": 6.96501038550168,
+          "CALCB": 6.522655283819988,
+          "CALCRL": 5.245295791722265,
+          "RAMP1": 0.947235765105195,
+          "CRCP": 1.4665461585085828
+        },
+        "per_gene_max_abs_Z_q95": {
+          "CALCA": 103.69804046135864,
+          "CALCB": 112.73539595332961,
+          "CALCRL": 14.145695880822352,
+          "RAMP1": 11.10665237541151,
+          "CRCP": 10.115794860197024
+        },
+        "per_gene_GWS_rate": {
+          "CALCA": 0.509,
+          "CALCB": 0.5065,
+          "CALCRL": 0.484,
+          "RAMP1": 0.197,
+          "CRCP": 0.173
+        },
+        "ligand_GWS_rate": 0.7545,
+        "receptor_invisible_rate": 0.2265,
+        "hit_pattern_rate": 0.1715,
+        "asymmetry_mean": 37.21545344649272,
+        "asymmetry_median": 26.662341870892938,
+        "asymmetry_q05_q95": [
+          -10.87189005439116,
+          126.89414789646156
+        ]
+      }
+    },
+    {
+      "param_sigma_beta_recep": 0.05,
+      "summary": {
+        "model": "M2_allelic_sigma_recep=0.05",
+        "n_replicates": 2000,
+        "elapsed_s": 2.9416329860687256,
+        "per_gene_max_abs_Z_mean": {
+          "CALCA": 25.98110906775899,
+          "CALCB": 26.712620720386976,
+          "CALCRL": 14.849228833003526,
+          "RAMP1": 7.059998101127277,
+          "CRCP": 6.85002196597578
+        },
+        "per_gene_max_abs_Z_median": {
+          "CALCA": 6.96501038550168,
+          "CALCB": 6.522655283819988,
+          "CALCRL": 13.113239479305662,
+          "RAMP1": 2.3680894127629877,
+          "CRCP": 3.6663653962714573
+        },
+        "per_gene_max_abs_Z_q95": {
+          "CALCA": 103.69804046135864,
+          "CALCB": 112.73539595332961,
+          "CALCRL": 35.364239702055876,
+          "RAMP1": 27.76663093852878,
+          "CRCP": 25.289487150492565
+        },
+        "per_gene_GWS_rate": {
+          "CALCA": 0.509,
+          "CALCB": 0.5065,
+          "CALCRL": 0.794,
+          "RAMP1": 0.403,
+          "CRCP": 0.4195
+        },
+        "ligand_GWS_rate": 0.7545,
+        "receptor_invisible_rate": 0.044,
+        "hit_pattern_rate": 0.032,
+        "asymmetry_mean": 25.538050765102124,
+        "asymmetry_median": 14.754389772867935,
+        "asymmetry_q05_q95": [
+          -28.440517444333306,
+          117.82218875686202
+        ]
+      }
+    },
+    {
+      "param_sigma_beta_recep": 0.1,
+      "summary": {
+        "model": "M2_allelic_sigma_recep=0.10",
+        "n_replicates": 2000,
+        "elapsed_s": 2.929641008377075,
+        "per_gene_max_abs_Z_mean": {
+          "CALCA": 25.98110906775899,
+          "CALCB": 26.712620720386976,
+          "CALCRL": 29.69845766600705,
+          "RAMP1": 14.119996202254555,
+          "CRCP": 13.70004393195156
+        },
+        "per_gene_max_abs_Z_median": {
+          "CALCA": 6.96501038550168,
+          "CALCB": 6.522655283819988,
+          "CALCRL": 26.226478958611324,
+          "RAMP1": 4.736178825525975,
+          "CRCP": 7.332730792542915
+        },
+        "per_gene_max_abs_Z_q95": {
+          "CALCA": 103.69804046135864,
+          "CALCB": 112.73539595332961,
+          "CALCRL": 70.72847940411175,
+          "RAMP1": 55.53326187705756,
+          "CRCP": 50.57897430098513
+        },
+        "per_gene_GWS_rate": {
+          "CALCA": 0.509,
+          "CALCB": 0.5065,
+          "CALCRL": 0.8725,
+          "RAMP1": 0.4885,
+          "CRCP": 0.5275
+        },
+        "ligand_GWS_rate": 0.7545,
+        "receptor_invisible_rate": 0.026,
+        "hit_pattern_rate": 0.019,
+        "asymmetry_mean": 6.075712962784473,
+        "asymmetry_median": -3.9565642976469455,
+        "asymmetry_q05_q95": [
+          -60.782896516651064,
+          104.11768353782576
+        ]
+      }
+    }
+  ],
+  "M3_baseline_2k": {
+    "summary": {
+      "model": "M3_null_2k",
+      "n_replicates": 2000,
+      "elapsed_s": 2.9878721237182617,
+      "per_gene_max_abs_Z_mean": {
+        "CALCA": 12.021163424627272,
+        "CALCB": 11.893511685465764,
+        "CALCRL": 31.004436692113305,
+        "RAMP1": 13.703523882904177,
+        "CRCP": 13.80930675142173
+      },
+      "per_gene_max_abs_Z_median": {
+        "CALCA": 2.369172190061827,
+        "CALCB": 2.0325826968521254,
+        "CALCRL": 26.481265241588748,
+        "RAMP1": 4.910222842035575,
+        "CRCP": 5.294563257559618
+      },
+      "per_gene_max_abs_Z_q95": {
+        "CALCA": 49.53929262662868,
+        "CALCB": 47.49993846328428,
+        "CALCRL": 75.40946182812884,
+        "RAMP1": 57.199914172003204,
+        "CRCP": 53.423212916690616
+      },
+      "per_gene_GWS_rate": {
+        "CALCA": 0.4485,
+        "CALCB": 0.444,
+        "CALCRL": 0.89,
+        "RAMP1": 0.4915,
+        "CRCP": 0.4965
+      },
+      "ligand_GWS_rate": 0.693,
+      "receptor_invisible_rate": 0.026,
+      "hit_pattern_rate": 0.0215,
+      "asymmetry_mean": -19.421929686895286,
+      "asymmetry_median": -19.323007412371922,
+      "asymmetry_q05_q95": [
+        -69.50098277838904,
+        32.16504657409641
+      ]
+    }
+  }
+}
