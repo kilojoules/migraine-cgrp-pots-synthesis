@@ -1,0 +1,267 @@
+{
+  "CGRP": {
+    "disease_id": "MONDO_0005277",
+    "disease_label": "migraine",
+    "ligand": {
+      "CALCA": {
+        "approvedSymbol": "CALCA",
+        "overall": 0.7263485038038543,
+        "datatype_scores": {
+          "literature": 0.9866463266189915,
+          "genetic_association": 0.7528082066801342,
+          "clinical": 0.9846606092675894
+        }
+      },
+      "CALCB": {
+        "approvedSymbol": "CALCB",
+        "overall": 0.6716442479649604,
+        "datatype_scores": {
+          "literature": 0.34795469379636756,
+          "genetic_association": 0.44964340829974714,
+          "clinical": 0.9846606092675894
+        }
+      }
+    },
+    "receptor": {
+      "CALCRL": {
+        "approvedSymbol": "CALCRL",
+        "overall": 0.6072308579836021,
+        "datatype_scores": {
+          "literature": 0.13597300266446663,
+          "clinical": 0.9920500023272724
+        }
+      },
+      "RAMP1": {
+        "approvedSymbol": "RAMP1",
+        "overall": 0.5710469959752931,
+        "datatype_scores": {
+          "literature": 0.4950445861209649,
+          "clinical": 0.914576717703655
+        }
+      },
+      "CRCP": {
+        "approvedSymbol": "CRCP",
+        "overall": 0.0025870589827929123,
+        "datatype_scores": {
+          "literature": 0.021277577916406734
+        }
+      }
+    }
+  },
+  "GLP-1": {
+    "disease_id": "MONDO_0005148",
+    "disease_label": "type 2 diabetes",
+    "ligand": {
+      "GCG": {
+        "approvedSymbol": "GCG",
+        "overall": 0.12024606490795775,
+        "datatype_scores": {
+          "literature": 0.9889782305845394
+        }
+      }
+    },
+    "receptor": {
+      "GLP1R": {
+        "approvedSymbol": "GLP1R",
+        "overall": 0.7667004145281737,
+        "datatype_scores": {
+          "literature": 0.9892402477917109,
+          "animal_model": 0.5639925992142412,
+          "genetic_association": 0.7580868287486968,
+          "clinical": 0.9977667725629762
+        }
+      }
+    }
+  },
+  "GIP": {
+    "disease_id": "MONDO_0005148",
+    "disease_label": "type 2 diabetes",
+    "ligand": {
+      "GIP": {
+        "approvedSymbol": "GIP",
+        "overall": 0.23838637397569676,
+        "datatype_scores": {
+          "literature": 0.8174009043099447,
+          "genetic_association": 0.35125743855773117
+        }
+      }
+    },
+    "receptor": {
+      "GIPR": {
+        "approvedSymbol": "GIPR",
+        "overall": 0.6743302170705993,
+        "datatype_scores": {
+          "literature": 0.5615911207733489,
+          "animal_model": 0.41898590571392924,
+          "genetic_association": 0.4925379228235705,
+          "clinical": 0.9683703958849756
+        }
+      }
+    }
+  },
+  "Kisspeptin": {
+    "disease_id": "EFO_0004703",
+    "disease_label": "age at menarche",
+    "ligand": {
+      "KISS1": {
+        "approvedSymbol": "KISS1",
+        "overall": 0.45512855307987754,
+        "datatype_scores": {
+          "genetic_association": 0.7486519104936648
+        }
+      }
+    },
+    "receptor": {
+      "KISS1R": {
+        "no_evidence": true,
+        "approvedSymbol": "KISS1R"
+      }
+    }
+  },
+  "Leptin": {
+    "disease_id": "EFO_0004340",
+    "disease_label": "body mass index",
+    "ligand": {
+      "LEP": {
+        "approvedSymbol": "LEP",
+        "overall": 0.4511594271642351,
+        "datatype_scores": {
+          "genetic_association": 0.742122999750475
+        }
+      }
+    },
+    "receptor": {
+      "LEPR": {
+        "approvedSymbol": "LEPR",
+        "overall": 0.543362171395572,
+        "datatype_scores": {
+          "genetic_association": 0.8937895127706641
+        }
+      }
+    }
+  },
+  "Oxytocin": {
+    "disease_id": "MONDO_0002009",
+    "disease_label": "major depressive disorder",
+    "ligand": {
+      "OXT": {
+        "approvedSymbol": "OXT",
+        "overall": 0.10004552471128224,
+        "datatype_scores": {
+          "literature": 0.8228364569152549
+        }
+      }
+    },
+    "receptor": {
+      "OXTR": {
+        "approvedSymbol": "OXTR",
+        "overall": 0.09216512964436355,
+        "datatype_scores": {
+          "literature": 0.5699730672891391,
+          "clinical": 0.12310598651635328
+        }
+      }
+    }
+  },
+  "Insulin": {
+    "disease_id": "MONDO_0005148",
+    "disease_label": "type 2 diabetes",
+    "ligand": {
+      "INS": {
+        "approvedSymbol": "INS",
+        "overall": 0.5204439612306425,
+        "datatype_scores": {
+          "literature": 0.9970306024874821,
+          "animal_model": 0.49850325404152923,
+          "genetic_association": 0.6621626168110301
+        }
+      }
+    },
+    "receptor": {
+      "INSR": {
+        "approvedSymbol": "INSR",
+        "overall": 0.788737101505948,
+        "datatype_scores": {
+          "genetic_literature": 0.3039653988058105,
+          "clinical": 0.9979912394828367,
+          "literature": 0.3903824902909539,
+          "genetic_association": 0.6878970949771386,
+          "somatic_mutation": 0.19453785523571876,
+          "animal_model": 0.5515063761099624
+        }
+      }
+    }
+  },
+  "Adiponectin": {
+    "disease_id": "MONDO_0005148",
+    "disease_label": "type 2 diabetes",
+    "ligand": {
+      "ADIPOQ": {
+        "approvedSymbol": "ADIPOQ",
+        "overall": 0.141633132850196,
+        "datatype_scores": {
+          "literature": 0.9840474067699329,
+          "animal_model": 0.7233253508299369
+        }
+      }
+    },
+    "receptor": {
+      "ADIPOR1": {
+        "approvedSymbol": "ADIPOR1",
+        "overall": 0.11079741598084442,
+        "datatype_scores": {
+          "literature": 0.7949999154419121,
+          "animal_model": 0.4650670601728901
+        }
+      },
+      "ADIPOR2": {
+        "approvedSymbol": "ADIPOR2",
+        "overall": 0.07358428147309741,
+        "datatype_scores": {
+          "literature": 0.3441195061689494,
+          "animal_model": 0.5191729011603244
+        }
+      }
+    }
+  },
+  "Ghrelin": {
+    "disease_id": "EFO_0004340",
+    "disease_label": "body mass index",
+    "ligand": {
+      "GHRL": {
+        "no_evidence": true,
+        "approvedSymbol": "GHRL"
+      }
+    },
+    "receptor": {
+      "GHSR": {
+        "no_evidence": true,
+        "approvedSymbol": "GHSR"
+      }
+    }
+  },
+  "SubstanceP_NK1": {
+    "disease_id": "MONDO_0002009",
+    "disease_label": "major depressive disorder",
+    "ligand": {
+      "TAC1": {
+        "approvedSymbol": "TAC1",
+        "overall": 0.07209592064377056,
+        "datatype_scores": {
+          "literature": 0.21126024513077912,
+          "animal_model": 0.5401465136779253
+        }
+      }
+    },
+    "receptor": {
+      "TACR1": {
+        "approvedSymbol": "TACR1",
+        "overall": 0.4055185081006406,
+        "datatype_scores": {
+          "literature": 0.14783519175637988,
+          "clinical": 0.6596553939595946
+        }
+      }
+    }
+  }
+}

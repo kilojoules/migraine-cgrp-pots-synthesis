@@ -1,0 +1,145 @@
+{
+  "spec": "analysis/generalize/PRE_REGISTRATION_generalize.md",
+  "seed": 20260501,
+  "n_pathways": 10,
+  "n_evaluable": 6,
+  "n_ligand_asymmetric": 2,
+  "permutation_p": 0.5066,
+  "verdict": "CGRP-specific",
+  "per_pathway_summary": {
+    "CGRP": {
+      "disease_label": "migraine",
+      "ligand_genes": [
+        "CALCA",
+        "CALCB"
+      ],
+      "receptor_genes": [
+        "CALCRL",
+        "RAMP1",
+        "CRCP"
+      ],
+      "ligand_l2g_median": 0.6012258074899406,
+      "receptor_l2g_median": 0.0,
+      "asymmetry": 0.6012258074899406,
+      "class": "ligand-asymmetric"
+    },
+    "GLP-1": {
+      "disease_label": "type 2 diabetes",
+      "ligand_genes": [
+        "GCG"
+      ],
+      "receptor_genes": [
+        "GLP1R"
+      ],
+      "ligand_l2g_median": 0.0,
+      "receptor_l2g_median": 0.7580868287486968,
+      "asymmetry": -0.7580868287486968,
+      "class": "receptor-asymmetric"
+    },
+    "GIP": {
+      "disease_label": "type 2 diabetes",
+      "ligand_genes": [
+        "GIP"
+      ],
+      "receptor_genes": [
+        "GIPR"
+      ],
+      "ligand_l2g_median": 0.35125743855773117,
+      "receptor_l2g_median": 0.4925379228235705,
+      "asymmetry": -0.14128048426583933,
+      "class": "balanced"
+    },
+    "Kisspeptin": {
+      "disease_label": "age at menarche",
+      "ligand_genes": [
+        "KISS1"
+      ],
+      "receptor_genes": [
+        "KISS1R"
+      ],
+      "ligand_l2g_median": 0.7486519104936648,
+      "receptor_l2g_median": 0.0,
+      "asymmetry": 0.7486519104936648,
+      "class": "ligand-asymmetric"
+    },
+    "Leptin": {
+      "disease_label": "body mass index",
+      "ligand_genes": [
+        "LEP"
+      ],
+      "receptor_genes": [
+        "LEPR"
+      ],
+      "ligand_l2g_median": 0.742122999750475,
+      "receptor_l2g_median": 0.8937895127706641,
+      "asymmetry": -0.15166651302018908,
+      "class": "balanced"
+    },
+    "Oxytocin": {
+      "disease_label": "major depressive disorder",
+      "ligand_genes": [
+        "OXT"
+      ],
+      "receptor_genes": [
+        "OXTR"
+      ],
+      "ligand_l2g_median": 0.0,
+      "receptor_l2g_median": 0.0,
+      "asymmetry": 0.0,
+      "class": "both-quiet"
+    },
+    "Insulin": {
+      "disease_label": "type 2 diabetes",
+      "ligand_genes": [
+        "INS"
+      ],
+      "receptor_genes": [
+        "INSR"
+      ],
+      "ligand_l2g_median": 0.6621626168110301,
+      "receptor_l2g_median": 0.6878970949771386,
+      "asymmetry": -0.02573447816610852,
+      "class": "balanced"
+    },
+    "Adiponectin": {
+      "disease_label": "type 2 diabetes",
+      "ligand_genes": [
+        "ADIPOQ"
+      ],
+      "receptor_genes": [
+        "ADIPOR1",
+        "ADIPOR2"
+      ],
+      "ligand_l2g_median": 0.0,
+      "receptor_l2g_median": 0.0,
+      "asymmetry": 0.0,
+      "class": "both-quiet"
+    },
+    "Ghrelin": {
+      "disease_label": "body mass index",
+      "ligand_genes": [
+        "GHRL"
+      ],
+      "receptor_genes": [
+        "GHSR"
+      ],
+      "ligand_l2g_median": 0.0,
+      "receptor_l2g_median": 0.0,
+      "asymmetry": 0.0,
+      "class": "both-quiet"
+    },
+    "SubstanceP_NK1": {
+      "disease_label": "major depressive disorder",
+      "ligand_genes": [
+        "TAC1"
+      ],
+      "receptor_genes": [
+        "TACR1"
+      ],
+      "ligand_l2g_median": 0.0,
+      "receptor_l2g_median": 0.0,
+      "asymmetry": 0.0,
+      "class": "both-quiet"
+    }
+  }
+}
