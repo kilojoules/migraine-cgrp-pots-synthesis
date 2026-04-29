@@ -1,0 +1,31 @@
+{
+  "spec": "analysis/sim_msprime/PRE_REGISTRATION_msprime.md",
+  "seed": 20260502,
+  "n_replicates": 1000,
+  "by_model": {
+    "M1_purifying_selection": {
+      "model": "M1_purifying_selection",
+      "n_replicates": 1000,
+      "elapsed_s": 97.22730708122253,
+      "ligand_GWS_rate": 0.519,
+      "receptor_invisible_rate": 0.064,
+      "hit_pattern_rate": 0.035
+    },
+    "M2_allelic_series": {
+      "model": "M2_allelic_series",
+      "n_replicates": 1000,
+      "elapsed_s": 75.49908304214478,
+      "ligand_GWS_rate": 0.837,
+      "receptor_invisible_rate": 0.028,
+      "hit_pattern_rate": 0.024
+    },
+    "M3_null": {
+      "model": "M3_null",
+      "n_replicates": 1000,
+      "elapsed_s": 72.8928771018982,
+      "ligand_GWS_rate": 0.814,
+      "receptor_invisible_rate": 0.007,
+      "hit_pattern_rate": 0.005
+    }
+  }
+}
