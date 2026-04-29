@@ -1,0 +1,74 @@
+{
+  "spec": "analysis/constraint/PRE_REGISTRATION_constraint.md",
+  "seed": 20260429,
+  "n_permutations": 10000,
+  "constraint_tsv_sha256": "68d8abdb7fc48f570869b02dfaa74b9fecaece7fcc5f301ddca40ec1ce12da00",
+  "n_background_genes_with_loeuf": 17592,
+  "background_loeuf_quantiles": {
+    "p10": 0.39210000000000017,
+    "p25": 0.648,
+    "p50": 0.963,
+    "p75": 1.281,
+    "p90": 1.709
+  },
+  "per_gene": [
+    {
+      "gene": "CALCA",
+      "lof.oe_ci.upper": 1.186,
+      "loeuf_percentile": 68.99158708503865,
+      "lof.pLI": 0.13467,
+      "lof.oe": 0.51957,
+      "mis.z_score": 0.3278
+    },
+    {
+      "gene": "CALCB",
+      "lof.oe_ci.upper": 1.392,
+      "loeuf_percentile": 80.24954524783993,
+      "lof.pLI": 0.003933,
+      "lof.oe": 0.77412,
+      "mis.z_score": -0.1422
+    },
+    {
+      "gene": "CALCRL",
+      "lof.oe_ci.upper": 0.701,
+      "loeuf_percentile": 28.680650295588904,
+      "lof.pLI": 0.015549,
+      "lof.oe": 0.47754,
+      "mis.z_score": 1.9565
+    },
+    {
+      "gene": "RAMP1",
+      "lof.oe_ci.upper": 1.734,
+      "loeuf_percentile": 90.71168713051388,
+      "lof.pLI": 0.00039711,
+      "lof.oe": 1.0457,
+      "mis.z_score": 0.30609
+    },
+    {
+      "gene": "CRCP",
+      "lof.oe_ci.upper": 1.397,
+      "loeuf_percentile": 80.5025011368804,
+      "lof.pLI": 0.00016169,
+      "lof.oe": 0.86324,
+      "mis.z_score": 1.2597
+    }
+  ],
+  "receptor_group": {
+    "genes": [
+      "CALCRL",
+      "RAMP1",
+      "CRCP"
+    ],
+    "mean_loeuf_percentile": 66.63161285432773,
+    "p_perm": 0.8287
+  },
+  "ligand_group": {
+    "genes": [
+      "CALCA",
+      "CALCB"
+    ],
+    "mean_loeuf_percentile": 74.62056616643929,
+    "p_perm": 0.125
+  },
+  "verdict": "M1 falsified (M2 supported)"
+}

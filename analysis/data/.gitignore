@@ -1,3 +1,4 @@
-raw/
+raw/*
+!raw/MANIFEST.sha256
 processed/ppi_graph.gpickle
 processed/background_features.tsv
