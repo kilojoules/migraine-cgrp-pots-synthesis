@@ -1,0 +1,90 @@
+{
+  "spec": "analysis/constraint_extended/PRE_REGISTRATION_constraint_extended.md",
+  "seed": 20260503,
+  "n_permutations": 10000,
+  "constraint_tsv_sha256": "68d8abdb7fc48f570869b02dfaa74b9fecaece7fcc5f301ddca40ec1ce12da00",
+  "metrics": {
+    "mis.z_score": {
+      "direction": "higher_more_constrained",
+      "per_gene_value": {
+        "CALCA": 0.3278,
+        "CALCB": -0.1422,
+        "CALCRL": 1.9565,
+        "RAMP1": 0.30609,
+        "CRCP": 1.2597
+      },
+      "per_gene_constraint_percentile": {
+        "CALCA": 35.4607931500676,
+        "CALCB": 21.89612438035151,
+        "CALCRL": 79.61919783686345,
+        "RAMP1": 34.7397476340694,
+        "CRCP": 65.03492564218116
+      },
+      "receptor_mean_percentile": 59.79795703770467,
+      "ligand_mean_percentile": 28.678458765209555,
+      "p_perm_receptor": 0.2896
+    },
+    "mis.oe": {
+      "direction": "lower_more_constrained",
+      "per_gene_value": {
+        "CALCA": 0.93423,
+        "CALCB": 1.0298,
+        "CALCRL": 0.7318,
+        "RAMP1": 0.94131,
+        "CRCP": 0.71066
+      },
+      "per_gene_constraint_percentile": {
+        "CALCA": 41.39251915277152,
+        "CALCB": 20.40896800360524,
+        "CALCRL": 85.601622352411,
+        "RAMP1": 39.308246958089235,
+        "CRCP": 87.77602523659306
+      },
+      "receptor_mean_percentile": 70.89529818236443,
+      "ligand_mean_percentile": 30.90074357818838,
+      "p_perm_receptor": 0.1083
+    },
+    "mis_pphen.oe": {
+      "direction": "lower_more_constrained",
+      "per_gene_value": {
+        "CALCA": 0.94775,
+        "CALCB": 0.80358,
+        "CALCRL": 0.5562,
+        "RAMP1": 0.85424,
+        "CRCP": 0.61456
+      },
+      "per_gene_constraint_percentile": {
+        "CALCA": 25.06943263617299,
+        "CALCB": 52.989854333163294,
+        "CALCRL": 86.01144930000567,
+        "RAMP1": 42.91220314005555,
+        "CRCP": 81.10298702034801
+      },
+      "receptor_mean_percentile": 70.00887982013641,
+      "ligand_mean_percentile": 39.02964348466814,
+      "p_perm_receptor": 0.1228
+    },
+    "syn.z_score": {
+      "direction": "higher_more_constrained",
+      "per_gene_value": {
+        "CALCA": -0.22844,
+        "CALCB": -0.30353,
+        "CALCRL": 0.33165,
+        "RAMP1": -0.40523,
+        "CRCP": 0.55758
+      },
+      "per_gene_constraint_percentile": {
+        "CALCA": 37.79367851709956,
+        "CALCB": 35.1569102484647,
+        "CALCRL": 62.14434616034706,
+        "RAMP1": 31.967998197081528,
+        "CRCP": 72.62944391233309
+      },
+      "receptor_mean_percentile": 55.58059608992056,
+      "ligand_mean_percentile": 36.475294382782124,
+      "p_perm_receptor": 0.3767
+    }
+  },
+  "verdict_primary": "M1-missense partially supported",
+  "sanity_flagged": []
+}
