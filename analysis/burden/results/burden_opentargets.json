@@ -1,0 +1,422 @@
+{
+  "spec": "analysis/burden/PRE_REGISTRATION_burden.md",
+  "seed": 20260430,
+  "datasource_filter": "gene_burden",
+  "by_gene": {
+    "CALCA": {
+      "side": "ligand",
+      "by_disease": {
+        "migraine": {
+          "ids_tried": [
+            {
+              "id": "MONDO_0005277",
+              "n_rows": 0
+            },
+            {
+              "id": "EFO_0003821",
+              "n_rows": 0
+            }
+          ],
+          "rows": []
+        },
+        "type_2_diabetes": {
+          "ids_tried": [
+            {
+              "id": "MONDO_0005148",
+              "n_rows": 0
+            },
+            {
+              "id": "EFO_0001360",
+              "n_rows": 0
+            }
+          ],
+          "rows": []
+        },
+        "hypertension": {
+          "ids_tried": [
+            {
+              "id": "MONDO_0001134",
+              "n_rows": 0
+            },
+            {
+              "id": "EFO_0000537",
+              "n_rows": 0
+            }
+          ],
+          "rows": []
+        },
+        "coronary_artery_disease": {
+          "ids_tried": [
+            {
+              "id": "EFO_0001645",
+              "n_rows": 0
+            },
+            {
+              "id": "MONDO_0005010",
+              "n_rows": 0
+            }
+          ],
+          "rows": []
+        },
+        "heart_failure": {
+          "ids_tried": [
+            {
+              "id": "EFO_0003144",
+              "n_rows": 0
+            },
+            {
+              "id": "MONDO_0005009",
+              "n_rows": 0
+            }
+          ],
+          "rows": []
+        },
+        "schizophrenia": {
+          "ids_tried": [
+            {
+              "id": "MONDO_0005090",
+              "n_rows": 0
+            },
+            {
+              "id": "EFO_0000692",
+              "n_rows": 0
+            }
+          ],
+          "rows": []
+        }
+      }
+    },
+    "CALCB": {
+      "side": "ligand",
+      "by_disease": {
+        "migraine": {
+          "ids_tried": [
+            {
+              "id": "MONDO_0005277",
+              "n_rows": 0
+            },
+            {
+              "id": "EFO_0003821",
+              "n_rows": 0
+            }
+          ],
+          "rows": []
+        },
+        "type_2_diabetes": {
+          "ids_tried": [
+            {
+              "id": "MONDO_0005148",
+              "n_rows": 0
+            },
+            {
+              "id": "EFO_0001360",
+              "n_rows": 0
+            }
+          ],
+          "rows": []
+        },
+        "hypertension": {
+          "ids_tried": [
+            {
+              "id": "MONDO_0001134",
+              "n_rows": 0
+            },
+            {
+              "id": "EFO_0000537",
+              "n_rows": 0
+            }
+          ],
+          "rows": []
+        },
+        "coronary_artery_disease": {
+          "ids_tried": [
+            {
+              "id": "EFO_0001645",
+              "n_rows": 0
+            },
+            {
+              "id": "MONDO_0005010",
+              "n_rows": 0
+            }
+          ],
+          "rows": []
+        },
+        "heart_failure": {
+          "ids_tried": [
+            {
+              "id": "EFO_0003144",
+              "n_rows": 0
+            },
+            {
+              "id": "MONDO_0005009",
+              "n_rows": 0
+            }
+          ],
+          "rows": []
+        },
+        "schizophrenia": {
+          "ids_tried": [
+            {
+              "id": "MONDO_0005090",
+              "n_rows": 0
+            },
+            {
+              "id": "EFO_0000692",
+              "n_rows": 0
+            }
+          ],
+          "rows": []
+        }
+      }
+    },
+    "CALCRL": {
+      "side": "receptor",
+      "by_disease": {
+        "migraine": {
+          "ids_tried": [
+            {
+              "id": "MONDO_0005277",
+              "n_rows": 0
+            },
+            {
+              "id": "EFO_0003821",
+              "n_rows": 0
+            }
+          ],
+          "rows": []
+        },
+        "type_2_diabetes": {
+          "ids_tried": [
+            {
+              "id": "MONDO_0005148",
+              "n_rows": 0
+            },
+            {
+              "id": "EFO_0001360",
+              "n_rows": 0
+            }
+          ],
+          "rows": []
+        },
+        "hypertension": {
+          "ids_tried": [
+            {
+              "id": "MONDO_0001134",
+              "n_rows": 0
+            },
+            {
+              "id": "EFO_0000537",
+              "n_rows": 0
+            }
+          ],
+          "rows": []
+        },
+        "coronary_artery_disease": {
+          "ids_tried": [
+            {
+              "id": "EFO_0001645",
+              "n_rows": 0
+            },
+            {
+              "id": "MONDO_0005010",
+              "n_rows": 0
+            }
+          ],
+          "rows": []
+        },
+        "heart_failure": {
+          "ids_tried": [
+            {
+              "id": "EFO_0003144",
+              "n_rows": 0
+            },
+            {
+              "id": "MONDO_0005009",
+              "n_rows": 0
+            }
+          ],
+          "rows": []
+        },
+        "schizophrenia": {
+          "ids_tried": [
+            {
+              "id": "MONDO_0005090",
+              "n_rows": 0
+            },
+            {
+              "id": "EFO_0000692",
+              "n_rows": 0
+            }
+          ],
+          "rows": []
+        }
+      }
+    },
+    "RAMP1": {
+      "side": "receptor",
+      "by_disease": {
+        "migraine": {
+          "ids_tried": [
+            {
+              "id": "MONDO_0005277",
+              "n_rows": 0
+            },
+            {
+              "id": "EFO_0003821",
+              "n_rows": 0
+            }
+          ],
+          "rows": []
+        },
+        "type_2_diabetes": {
+          "ids_tried": [
+            {
+              "id": "MONDO_0005148",
+              "n_rows": 0
+            },
+            {
+              "id": "EFO_0001360",
+              "n_rows": 0
+            }
+          ],
+          "rows": []
+        },
+        "hypertension": {
+          "ids_tried": [
+            {
+              "id": "MONDO_0001134",
+              "n_rows": 0
+            },
+            {
+              "id": "EFO_0000537",
+              "n_rows": 0
+            }
+          ],
+          "rows": []
+        },
+        "coronary_artery_disease": {
+          "ids_tried": [
+            {
+              "id": "EFO_0001645",
+              "n_rows": 0
+            },
+            {
+              "id": "MONDO_0005010",
+              "n_rows": 0
+            }
+          ],
+          "rows": []
+        },
+        "heart_failure": {
+          "ids_tried": [
+            {
+              "id": "EFO_0003144",
+              "n_rows": 0
+            },
+            {
+              "id": "MONDO_0005009",
+              "n_rows": 0
+            }
+          ],
+          "rows": []
+        },
+        "schizophrenia": {
+          "ids_tried": [
+            {
+              "id": "MONDO_0005090",
+              "n_rows": 0
+            },
+            {
+              "id": "EFO_0000692",
+              "n_rows": 0
+            }
+          ],
+          "rows": []
+        }
+      }
+    },
+    "CRCP": {
+      "side": "receptor",
+      "by_disease": {
+        "migraine": {
+          "ids_tried": [
+            {
+              "id": "MONDO_0005277",
+              "n_rows": 0
+            },
+            {
+              "id": "EFO_0003821",
+              "n_rows": 0
+            }
+          ],
+          "rows": []
+        },
+        "type_2_diabetes": {
+          "ids_tried": [
+            {
+              "id": "MONDO_0005148",
+              "n_rows": 0
+            },
+            {
+              "id": "EFO_0001360",
+              "n_rows": 0
+            }
+          ],
+          "rows": []
+        },
+        "hypertension": {
+          "ids_tried": [
+            {
+              "id": "MONDO_0001134",
+              "n_rows": 0
+            },
+            {
+              "id": "EFO_0000537",
+              "n_rows": 0
+            }
+          ],
+          "rows": []
+        },
+        "coronary_artery_disease": {
+          "ids_tried": [
+            {
+              "id": "EFO_0001645",
+              "n_rows": 0
+            },
+            {
+              "id": "MONDO_0005010",
+              "n_rows": 0
+            }
+          ],
+          "rows": []
+        },
+        "heart_failure": {
+          "ids_tried": [
+            {
+              "id": "EFO_0003144",
+              "n_rows": 0
+            },
+            {
+              "id": "MONDO_0005009",
+              "n_rows": 0
+            }
+          ],
+          "rows": []
+        },
+        "schizophrenia": {
+          "ids_tried": [
+            {
+              "id": "MONDO_0005090",
+              "n_rows": 0
+            },
+            {
+              "id": "EFO_0000692",
+              "n_rows": 0
+            }
+          ],
+          "rows": []
+        }
+      }
+    }
+  }
+}
