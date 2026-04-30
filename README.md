@@ -1,79 +1,60 @@
-# CGRP ligand-receptor genetic asymmetry in migraine
+# The CGRP migraine paradox: drugs work, the genetics is silent
 
-**Bottom line.** Anti-CGRP-receptor drugs (erenumab, rimegepant, atogepant) are FDA-approved migraine therapies that reduce monthly migraine days by 3.5–4.7. Yet across **five independent analytical lenses on the largest published migraine GWAS, the genes encoding the CGRP receptor (`CALCRL`, `RAMP1`, `CRCP`) carry zero genetic-association evidence**. The ligand genes (`CALCA`, `CALCB`) carry signal in the canonical GWAS-hit tier. We falsify the obvious explanations — purifying selection, cardiovascular-mediated selection, and "this is what GWAS does to peptide-hormone pathways generally" — and conclude the asymmetry reflects *intrinsic effect-size architecture*: receptor-pathway variants exist at population frequency but contribute too little to migraine risk to surface in current biobanks. Pharmacology at therapeutic doses simply produces far larger effects than common variants ever do.
+**Bottom line.** Three FDA-approved migraine drugs (erenumab, rimegepant, atogepant) work by blocking a specific protein on the surface of nerve cells called the CGRP receptor. They cut monthly migraine days by 3.5–4.7. But when you look at the largest human genetic study of migraine — over 100,000 migraine sufferers and 770,000 controls — **the genes that build that receptor (`CALCRL`, `RAMP1`, `CRCP`) show no connection to migraine.** The genes that make the molecule the drugs intercept (CGRP itself, encoded by `CALCA` and `CALCB`) do show up. We checked five different ways of looking at this and the gap was the same every time. Then we ruled out the obvious explanations one by one. The conclusion: the receptor genes carry effects on migraine risk that are too small to detect at population scale, but big enough that drug-strength interference with the same proteins changes the disease.
 
-The paper is in [`paper/main.pdf`](paper/main.pdf), 13 pages. All analyses are pre-registered with locked seeds before data was opened.
-
----
-
-## The juiciest findings
-
-1. **The CGRP receptor heterodimer is genetically silent for migraine despite being a validated drug target.** OpenTargets Genetics returns `genetic_association = 0.753` for `CALCA` (in the range of canonical migraine GWAS hits *PRDM16* 0.798, *TRPM8* 0.816, *FHL5* 0.855), `0.450` for `CALCB` (graded — intermediate), and **no `genetic_association` datatype recorded at all** for `CALCRL`, `RAMP1`, `CRCP`. The non-zero overall scores those receptor genes do have come entirely from drug-target evidence.
-
-2. **It's not purifying selection.** gnomAD v4.1 LOEUF (730K exomes) places `RAMP1` at the **90.7th percentile** and `CRCP` at the **80.5th percentile** of the protein-coding background — markedly LoF-tolerant (`RAMP1` pLI = 0.0004). Receptor-group mean LOEUF percentile is 66.6, permutation p = 0.83. Only `CALCRL` shows modest constraint (28.7th percentile).
-
-3. **It's not cardiovascular-mediated selection either.** Across `~1.3 million` UK Biobank exome-equivalents (Genebass + Backman 2021 + AstraZeneca PheWAS aggregated via OpenTargets), gene-burden tests return **zero positive evidence rows** for any of the five CGRP genes against any of 15 phenotypes — including all four cardiovascular phenotypes (hypertension, CAD, heart failure, atrial fibrillation). Positive controls (LDLR/LDL at -log10 P=96, MC4R/obesity at 21, PCSK9/LDL at 16) verify the API works.
-
-4. **It's not a generic peptide-hormone-GWAS feature.** Same five-lens consolidation applied to nine other peptide-hormone pathways: only **Kisspeptin/age at menarche reproduces the CGRP pattern**. GLP-1/T2D shows the *opposite* pattern (receptor-asymmetric — *GLP1R* drives the signal). Three pathways are balanced (GIP, Leptin, Insulin); four are both-quiet. Cross-pathway permutation p = 0.51.
-
-5. **There is modest biophysical constraint at the receptor protein level.** `CALCRL` has only 56% of expected PolyPhen-damaging missense (`mis_pphen.oe = 0.556`); `CRCP` 0.615. `RAMP1` is unconstrained at every metric. The receptor proteins are partially constrained at specific functional residues, but the migraine-relevant common-variant signal does not concentrate there.
-
-6. **A pre-registered forward-population-genetic Monte Carlo (Wright/PRF, 10K replicates × 3 models, msprime+demographic confirmation) cannot distinguish "purifying selection" from "intrinsically small effects" on the genetic data alone.** The two scenarios both produce the observed pattern at the same rate. The gnomAD constraint test and rare-variant burden tests are what break the tie — toward "intrinsically small effects."
+The paper is in [`paper/main.pdf`](paper/main.pdf), 13 pages. Every analysis was written down in advance, sealed in a git commit, then run.
 
 ---
 
-## What this means for migraine genetics
+## What we found
 
-Causal models of CGRP-pathway involvement in migraine genetics must accommodate the asymmetry. The receptor side carries small per-variant effects on disease risk that current biobank-scale GWAS cannot surface, even though pharmacological perturbation at therapeutic doses clearly modulates the disease. **Genetic invisibility ≠ mechanistic uninvolvement**, and pharmaceutical target validation should not over-rely on common-variant GWAS evidence for pathways that look like CGRP.
+1. **The drug target is genetically invisible.** A standard resource (OpenTargets) collects evidence linking each gene to each disease. `CALCA` scores 0.75 on the genetics axis for migraine — in the same range as well-known migraine genes like `TRPM8` (0.82) and `FHL5` (0.86). `CALCB` is moderate at 0.45. The three receptor genes — the actual targets of the marketed drugs — score zero. They have no recorded genetic evidence linking them to migraine at all. Their nonzero overall scores come entirely from the fact that drugs against them work.
+
+2. **It is not because the receptor is too important to mutate.** If breaking the CGRP receptor were lethal or strongly disadvantageous, disabling mutations would be filtered out by natural selection and we would see far fewer than expected in healthy people. The gnomAD project sequenced 730,000 human exomes and counted exactly that. `RAMP1` ranks at the 90th percentile of mutation-tolerance — meaning 90% of all human genes are *less* tolerant of disabling mutations than `RAMP1` is. `CRCP` is at the 80th. The receptor complex is not under strong selection at the loss-of-function level.
+
+3. **It is not because rare mutations are carrying the signal.** Three separate large studies (Genebass, AstraZeneca, Regeneron) have tested whether rare disabling mutations in each gene associate with each of thousands of diseases, across roughly 1.3 million sequenced people. Across migraine, hypertension, heart disease, heart failure, atrial fibrillation, and ten other tested phenotypes, **none of the five CGRP-pathway genes have a single positive hit.** Known positive genes light up as expected in the same lookup (`LDLR` for cholesterol scores higher than 1 in 10⁹⁶, `MC4R` for obesity at 1 in 10²¹), so the lookup works. The CGRP receptor pathway just genuinely has no signal.
+
+4. **It is not how peptide-hormone signaling looks in genetics generally.** We applied the same comparison to nine other signaling systems (insulin, leptin, GLP-1, kisspeptin, oxytocin, ghrelin, GIP, adiponectin, and substance P). Only one — kisspeptin and age at first menstruation — shows the same ligand-strong / receptor-silent pattern. The diabetes drug GLP-1 shows the *opposite*: the receptor (`GLP1R`) carries strong genetic signal and the ligand precursor does not. Three pathways are balanced (insulin, leptin, GIP). Across 10 pathways, no general pattern; the CGRP case is specific.
+
+5. **The receptor protein has functional constraints — but the migraine-relevant variation isn't there.** Two of the three receptor genes (`CALCRL` and `CRCP`) have fewer damaging changes in their protein-coding sequence than expected by chance: about 56% and 62% of expectation respectively. So specific functional residues do matter. But the variants that associate with migraine don't sit on those constrained residues. `RAMP1` is unconstrained at every measure — its protein sequence tolerates damage freely.
+
+6. **A computer simulation cannot tell selection from "small effects" from the genetics alone — but the gnomAD and rare-variant tests above can.** A pre-registered population-genetics simulation (10,000 replicates × 3 competing explanations, plus a more realistic version with population history confirmed in `msprime`) shows that "purifying selection on the receptor" and "intrinsically small effects on the receptor side" produce the observed pattern equally well. The genetics alone is not enough to distinguish them. The constraint and rare-variant lookups break the tie — toward "small effects."
+
+## What this means
+
+A gene that doesn't show up in human genetic studies of a disease isn't necessarily uninvolved in the disease. Pharmaceutical companies sometimes use "genetic evidence supports this target" as a green light for drug development. The CGRP story is a counter-example. Anti-CGRP-receptor drugs were validated by clinical trials and they work — even though five different ways of mining migraine genetics produce no signal at the receptor genes. The reason is mundane: drugs at therapeutic doses produce much larger effects than the small differences carried by common genetic variants. The genetics is silent because population-frequency variation has small effects on disease risk for that side of the pathway, not because the proteins are uninvolved.
 
 ## What's in the repo
 
 ```
-paper/                           # Manuscript + bibliography
+paper/                      Manuscript and bibliography
   main.tex, main.pdf, refs.bib
 
 analysis/
-  PRE_REGISTRATION.md            # Original pre-reg (PPI proximity)
-  scripts/                       # 11 numbered analysis scripts
-  data/                          # raw downloads gitignored; SHA-256 in MANIFEST
-  results/                       # JSON results per analysis
-  figures/                       # PDFs + PNGs
+  PRE_REGISTRATION.md       The original sealed prediction (PPI proximity)
+  scripts/                  11 numbered analysis scripts
+  data/                     Raw downloads ignored by git; SHA-256 hashes recorded
+  results/                  JSON output of each analysis
+  figures/                  PDF and PNG figures
 
-  simulations/                   # Forward-population-genetic Monte Carlo
-    SIM_SPEC.md
-    scripts/{01_simulate, 02_figure, 03_sensitivity}_asymmetry.py
-    results/asymmetry_simulation.json
-    figures/asymmetry_simulation.pdf
-
-  constraint/                    # gnomAD LOEUF test
-    PRE_REGISTRATION_constraint.md
-    scripts/, results/, figures/
-
-  burden/                        # OpenTargets rare-variant burden
-    PRE_REGISTRATION_burden.md
-    scripts/, results/, figures/
-
-  constraint_extended/           # gnomAD missense + damaging-missense
-    PRE_REGISTRATION_constraint_extended.md
-    scripts/, results/, figures/
-
-  generalize/                    # 10 peptide-hormone pathways
-    PRE_REGISTRATION_generalize.md
-    scripts/, results/, figures/
-
-  sim_msprime/                   # msprime confirmation of the PRF simulation
-    PRE_REGISTRATION_msprime.md
-    scripts/, results/, figures/
+  simulations/              Population-genetics Monte Carlo simulation
+  constraint/               Mutation-tolerance test (gnomAD)
+  burden/                   Rare-variant lookup (OpenTargets)
+  constraint_extended/      Damaging-missense follow-up (gnomAD)
+  generalize/               Same comparison applied to 10 signaling pathways
+  sim_msprime/              Simulation re-run under realistic demography
 ```
+
+Each subdirectory has its own sealed-prediction file (`PRE_REGISTRATION_*.md`) committed before the analysis ran, plus the script that ran it, the JSON of results, and the figure.
 
 ## Reproducibility
 
-Every analysis section in the paper has a pre-registration document committed to this repository **before** the corresponding output was opened. Per-analysis random seeds are recorded in those documents (`20260426` PPI proximity, `20260428` PRF simulation, `20260429` constraint, `20260430` burden, `20260501` cross-pathway, `20260502` msprime, `20260503` missense). Raw downloads are not redistributed but are fetched by the scripts from canonical sources, with SHA-256 hashes in `analysis/data/raw/MANIFEST.sha256`.
+Every analysis section in the paper has a written-down prediction (decision rule, parameters, random seed) committed to this repository **before** the corresponding output was opened. Per-analysis seeds are recorded in those documents. Raw data files are not redistributed but are fetched by the scripts from their canonical sources, with SHA-256 hashes in `analysis/data/raw/MANIFEST.sha256`.
 
 To rebuild the paper:
 ```bash
 cd paper
-make            # builds main.pdf via latexmk -pdf
+make
 ```
 
 To re-run any analysis (each is self-contained):
@@ -84,4 +65,4 @@ python3 scripts/01_<analysis_name>.py
 
 ## History
 
-A long-form 25-page manuscript with the original POTS-comorbidity framing is preserved at git tag `long-form-v1`. The current paper isolates the load-bearing asymmetry observation and its adjudication.
+A longer 25-page manuscript with broader framing about a clinical condition called POTS (Postural Orthostatic Tachycardia Syndrome) is preserved at git tag `long-form-v1`. The current paper isolates the CGRP-genetics observation that survived everything we threw at it.
